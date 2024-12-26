@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .after-line > span {
+    position: relative;
+  }
+
+  .after-line > span::after {
+    content: '';
+    position: absolute;
+    bottom: 0.2em;
+    left: 50%;
+    height: calc(2px + 0.05em);
+    width: 0;
+    background-color: currentColor;
+    border-color: var(--background);
+    border-width: calc(0.8px + 0.01em) 0;
+    transition: width 0.25s ease, left 0.25s ease;
+    pointer-events: none;
+  }
+
+  .after-line:hover > span::after, .after-line:focus > span::after {
+    width: 100%;
+    left: 0;
+  }
+}
