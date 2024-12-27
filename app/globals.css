@@ -18,6 +18,17 @@ body {
   display: none;
 }
 
+.grid3 {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+@media (orientation: landscape) {
+  .grid3 {
+    grid-template-columns: 1fr auto 1fr;
+  }
+}
+
 @layer utilities {
   .after-line > span {
     position: relative;

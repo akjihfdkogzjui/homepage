@@ -6,7 +6,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h1: ({ children }) => <h1 className="text-4xl font-bold text-gray-900 my-6">{children}</h1>,
     h2: ({ children }) => <h2 className="text-3xl font-semibold text-gray-800 my-5">{children}</h2>,
     h3: ({ children }) => <h3 className="text-2xl font-medium text-gray-700 my-4">{children}</h3>,
-    p: ({ children }) => <p className="text-base text-gray-600 leading-7 my-3">{children}</p>,
+    p: ({ children }) => <p className="text-base text-gray-600 leading-8 my-6">{children}</p>,
     blockquote: ({ children }) => (
       <blockquote className="border-l-4 border-gray-300 pl-4 italic text-gray-600 my-4">
         {children}
