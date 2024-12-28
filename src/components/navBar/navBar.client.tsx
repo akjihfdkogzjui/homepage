@@ -6,27 +6,23 @@ import { usePathname } from "next/navigation";
 
 import { Bars3Icon, ChevronLeftIcon, ChevronRightIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
+import type { LinkItem } from "@utils/site";
+import Button from "@cp/button.client";
 import { font, globalTheme } from "@/src/theme";
-import Button from "./button.client";
 // import Searchbox from "./searchBox.client";
 
 import "./navBar.css";
 
 
-export interface LinkItem {
-  label: string;
-  url: string;
-}
-
-interface INavBarProps {
+interface INavBarPrvProps {
+  navItems: LinkItem[];
   homeLabel: string;
-  links: Array<LinkItem>;
   reverseTheme?: boolean;
   transparentAtTop?: boolean;
   reverseTransparentTheme?: boolean;
 }
 
-const NavBar: FC<INavBarProps> = ({ homeLabel, links, reverseTheme = false, transparentAtTop = false, reverseTransparentTheme = false }) => {
+const NavBarPrv: FC<INavBarPrvProps> = ({ navItems, homeLabel, reverseTheme = false, transparentAtTop = false, reverseTransparentTheme = false }) => {
   const pathname = usePathname();
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -63,11 +59,13 @@ const NavBar: FC<INavBarProps> = ({ homeLabel, links, reverseTheme = false, tran
   useEffect(() => {
     const container = navBoxRef.current;
     if (container) {
-      const ro = new ResizeObserver(checkScrollable);
-      ro.observe(container);
-      return ro.disconnect;
+      checkScrollable();
+      window.addEventListener('resize', checkScrollable);
+      return () => {
+        window.removeEventListener('resize', checkScrollable);
+      };
     }
-  }, [checkScrollable, links]);
+  }, [checkScrollable, navItems]);
   const scrollLeft = useCallback(() => {
     const container = navBoxRef.current;
     if (container) {
@@ -159,7 +157,7 @@ const NavBar: FC<INavBarProps> = ({ homeLabel, links, reverseTheme = false, tran
             </Button>
           </div>
         </div>
-        <div className="h-full header-box landscape:ml-4 py-2 landscape:py-4 flex flex-row items-center overflow-hidden">
+        <div className="h-full header-box landscape:ml-4 py-2 landscape:py-4 pr-2 flex flex-row items-center overflow-hidden">
           <div className="grow-0 shrink min-w-8 text-left text-2xl overflow-hidden text-ellipsis">
             <Link href="/">
               <span className="capitalize select-none">
@@ -171,16 +169,16 @@ const NavBar: FC<INavBarProps> = ({ homeLabel, links, reverseTheme = false, tran
           <nav className="grow-0 shrink-[4] text-right overflow-hidden relative z-0" ref={navBoxRef}>
             <ul className="m-0 p-0 list-none h-full space-x-1 overflow-x-scroll scroll-style-none portrait:hidden">
               {
-                links.map((link, i) => {
-                  const isCur = link.url === pathname;
+                navItems.map((item, i) => {
+                  const isCur = item.url === pathname;
 
                   return (
                     <li
-                      key={`${link.label}~${i}`}
+                      key={`${item.label}~${i}`}
                       className="inline-flex h-full text-center items-center justify-center"
                     >
                       <Link
-                        href={link.url}
+                        href={item.url}
                         className={`flex-none px-3 outline-none hover:opacity-75 focus:opacity-75 ${
                           isCur ? 'bg-[var(--background)] text-[var(--foreground)]' : 'after-line'
                         }`}
@@ -191,7 +189,7 @@ const NavBar: FC<INavBarProps> = ({ homeLabel, links, reverseTheme = false, tran
                         } : undefined}
                       >
                         <span className="uppercase select-none">
-                          {link.label}
+                          {item.label}
                         </span>
                       </Link>
                     </li>
@@ -245,7 +243,7 @@ const NavBar: FC<INavBarProps> = ({ homeLabel, links, reverseTheme = false, tran
             }
           </nav>
           {/* Search */}
-          {/* <div className="flex-none mr-2">
+          {/* <div className="flex-none">
             <Searchbox />
           </div> */}
         </div>
@@ -279,27 +277,27 @@ const NavBar: FC<INavBarProps> = ({ homeLabel, links, reverseTheme = false, tran
           <nav className="flex-1 text-left overflow-hidden mt-6">
             <ul className="m-0 p-0 list-none w-full space-y-4 overflow-hidden scroll-style-none flex flex-col mr-6 animation-group">
               {
-                menuOpen && links.map((link, i) => {
-                  const isCur = link.url === pathname;
+                menuOpen && navItems.map((item, i) => {
+                  const isCur = item.url === pathname;
 
                   return (
                     <li
-                      key={`${link.label}~${i}`}
+                      key={`${item.label}~${i}`}
                       className="inline-flex w-full text-left slide-in-left"
                     >
                       <Link
-                        href={link.url}
+                        href={item.url}
                         className={`flex-none px-3 outline-none hover:opacity-75 focus:opacity-75 ${
                           isCur ? 'bg-[var(--background)] text-[var(--foreground)]' : 'after-line'
                         }`}
                         style={isCur ? {
                           // @ts-expect-error css variables
-                          '--background': reverse ? globalTheme.background : globalTheme.foreground,
-                          '--foreground': reverse ? globalTheme.foreground : globalTheme.background,
+                          '--background': globalTheme.foreground,
+                          '--foreground': globalTheme.background,
                         } : undefined}
                       >
                         <span className="uppercase select-none">
-                          {link.label}
+                          {item.label}
                         </span>
                       </Link>
                     </li>
@@ -315,4 +313,4 @@ const NavBar: FC<INavBarProps> = ({ homeLabel, links, reverseTheme = false, tran
 };
 
 
-export default NavBar;
+export default NavBarPrv;

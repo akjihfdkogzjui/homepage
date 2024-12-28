@@ -1,3 +1,4 @@
+import { black, white } from "@/tailwind.config";
 import { Geist, Geist_Mono, Zilla_Slab } from "next/font/google";
 
 
@@ -22,10 +23,7 @@ export const font = {
   serif,
 };
 
-
-
-
 export const globalTheme = {
-  background: "#f9f9f9",
-  foreground: "#161616",
+  background: white,
+  foreground: black,
 } as const;

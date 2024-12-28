@@ -2,8 +2,6 @@ import { type FC, type PropsWithChildren } from "react";
 import type { Metadata, Viewport } from "next";
 import { headers } from "next/headers";
 
-import NavBar, { type LinkItem } from "@cp/navBar.client";
-
 import siteData from "@constant/site.json";
 import profileData from "@constant/profile.json";
 import { font, globalTheme } from "@/src/theme";
@@ -73,57 +71,21 @@ export const viewport: Viewport = {
   themeColor: globalTheme.background,
 };
 
-// FIXME: links
-const links: LinkItem[] = [
-  {
-    label: "Home",
-    url: "/",
-  },
-  {
-    label: "About",
-    url: "/about",
-  },
-  {
-    label: "Projects",
-    url: "/projects",
-  },
-  {
-    label: "Papers",
-    url: "/papers",
-  },
-  {
-    label: "Blogs",
-    url: "/blogs",
-  },
-  {
-    label: "Events",
-    url: "/events",
-  },
-  {
-    label: "Contact",
-    url: "/contact",
-  },
-];
 
-const RootLayout: FC<PropsWithChildren> = ({ children }) => {
-  return (
-    <html lang="en">
-      <body
-        className={`${font.standardSans.variable} ${font.standardMono.variable} antialiased w-screen h-screen overflow-hidden bg-background text-foreground`}
-        style={{
-          // @ts-expect-error css variables
-          '--background': globalTheme.background,
-          '--foreground': globalTheme.foreground,
-        }}
-      >
-        <NavBar homeLabel={`${profileData.fullName}, ${profileData.title}`} links={links} transparentAtTop reverseTransparentTheme />
-        <div className="relative w-full h-full overflow-x-hidden overflow-y-scroll scroll-style-none" id="body">
-          {children}
-        </div>
-      </body>
-    </html>
-  );
-};
+const EmptyLayout: FC<PropsWithChildren> = ({ children }) => (
+  <html lang="en">
+    <body
+      className={`${font.serif.className} ${font.standardSans.variable} ${font.standardMono.variable} antialiased w-screen h-screen overflow-hidden bg-background text-foreground`}
+      style={{
+        // @ts-expect-error css variables
+        '--background': globalTheme.background,
+        '--foreground': globalTheme.foreground,
+      }}
+    >
+      {children}
+    </body>
+  </html>
+);
 
 
-export default RootLayout;
+export default EmptyLayout;

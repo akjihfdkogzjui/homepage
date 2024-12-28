@@ -10,11 +10,6 @@ import Button from "./button.client";
 import "./navBar.css";
 
 
-export interface LinkItem {
-  label: string;
-  url: string;
-}
-
 const Searchbox: FC = () => {
   const router = useRouter();
   const [searchboxOpen, setSearchboxOpen] = useState(false);
