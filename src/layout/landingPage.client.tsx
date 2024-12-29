@@ -89,7 +89,7 @@ const LandingPage: (props: ILandingPageProps) => FC<PropsWithChildren> = ({ cove
               <div className="w-full overflow-hidden shadow-2xl">
                 <div className="grid grid3">
                   <div className="hidden landscape:block" />
-                  <article className="landscape:max-w-[640px] px-8 py-16 mb-8">
+                  <article className="landscape:max-w-[840px] px-8 py-16 mb-8">
                     {children}
                   </article>
                   <div className="hidden landscape:block" />

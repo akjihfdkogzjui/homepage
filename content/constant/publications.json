@@ -1,0 +1,120 @@
+{
+  "Journal_Papers": [
+    {
+      "authors": "M. Zhang, E. Wei, R. Berry, and J. Huang",
+      "title": "Age-Dependent Differential Privacy",
+      "status": "To appear",
+      "journal": "IEEE Transactions on Information Theory (TIT)"
+    },
+    {
+      "authors": "M. Zhang, E. Wei, and R. Berry",
+      "title": "Faithful Edge Federated Learning: Scalability and Privacy",
+      "journal": "IEEE Journal on Selected Areas in Communications (JSAC)",
+      "year": 2022
+    },
+    {
+      "authors": "M. Zhang, A. Arafa, E. Wei, and R. Berry",
+      "title": "Optimal and Quantized Mechanism Design for Fresh Data Acquisition",
+      "journal": "IEEE Journal on Selected Areas in Communications (JSAC)",
+      "year": 2021
+    },
+    {
+      "authors": "M. Zhang, A. Arafa, J. Huang, and H. V. Poor",
+      "title": "Pricing Fresh Data",
+      "status": "To appear",
+      "journal": "IEEE Journal on Selected Areas in Communications (JSAC)",
+      "year": 2021
+    },
+    {
+      "authors": "M. Zhang, J. Huang, and R. Zhang",
+      "title": "Wireless Power Transfer with Information Asymmetry: A Public Goods Perspective",
+      "journal": "IEEE Transactions on Mobile Computing (TMC)",
+      "year": 2021
+    },
+    {
+      "authors": "M. Zhang and J. Huang",
+      "title": "Efficient Network Sharing with Asymmetric Constraint Information",
+      "journal": "IEEE Journal on Selected Areas in Communications (JSAC)",
+      "year": 2019
+    },
+    {
+      "authors": "M. Zhang, L. Gao, J. Huang, and M. Honig",
+      "title": "Hybrid Pricing for Mobile Collaborative Internet Access",
+      "journal": "IEEE/ACM Transactions on Networking (ToN)",
+      "year": 2019
+    },
+    {
+      "authors": "M. Zhang, and Y. Liu",
+      "title": "Secure Beamforming for Untrusted MISO Cognitive Radio Networks",
+      "journal": "IEEE Transactions on Wireless Communications (TWC)",
+      "year": 2018
+    },
+    {
+      "authors": "M. Zhang, Y. Liu, and R. Zhang",
+      "title": "Artificial Noise Aided Secrecy Information and Power Transfer in OFDMA Systems",
+      "journal": "IEEE Transactions on Wireless Communications (TWC)",
+      "year": 2016,
+      "note": "ESI Highly Cited Paper"
+    },
+    {
+      "authors": "M. Zhang, and Y. Liu",
+      "title": "Energy harvesting for physical-layer security in OFDMA networks",
+      "journal": "IEEE Transactions on Information Forensics and Security (TIFS)",
+      "year": 2016,
+      "note": "ESI Highly Cited Paper"
+    }
+  ],
+  "Conference_Papers": [
+    {
+      "authors": "M. Zhou, M. Zhang*, H. Yang, and R. Yates",
+      "title": "Age-minimal CPU Scheduling",
+      "conference": "IEEE International Conference on Computer Communications (INFOCOM)",
+      "year": 2024
+    },
+    {
+      "authors": "M. Zhang, E. Wei, R. Berry, and J. Huang",
+      "title": "Age-Dependent Differential privacy",
+      "conference": "ACM Sigmetrics",
+      "year": 2022
+    },
+    {
+      "authors": "J. He, Q. Ma, M. Zhang, and J. Huang",
+      "title": "Optimal Fresh Data Sampling and Trading",
+      "conference": "WiOpt",
+      "year": 2021,
+      "note": "Best Paper Award"
+    },
+    {
+      "authors": "M. Zhang, E. Wei, and R. Berry",
+      "title": "Faithful Edge Federated Learning: Scalability and Privacy",
+      "conference": "NetEcon",
+      "year": 2021
+    },
+    {
+      "authors": "M. Zhang, A. Arafa, E. Wei, and R. Berry",
+      "title": "Optimal Mechanism Design for Fresh Data Acquisition",
+      "conference": "IEEE International Symposium on Information Theory (ISIT)",
+      "date": "12-20 July 2021"
+    },
+    {
+      "authors": "M. Zhang, B. Swenson, J. Huang, and H. V. Poor",
+      "title": "Truthful Mobile Crowd Sensing with Interdependent Valuations",
+      "conference": "ACM MobiHoc",
+      "year": 2020,
+      "note": "Acceptance rate 15%"
+    },
+    {
+      "authors": "M. Zhang, A. Arafa, J. Huang, and H. V. Poor",
+      "title": "How to Price Fresh Data",
+      "conference": "International Symposium on Modeling and Optimization in Mobile, Ad Hoc and Wireless Networks (WiOpt)",
+      "year": 2019
+    },
+    {
+      "authors": "M. Zhang and J. Huang",
+      "title": "Mechanism Design for Network Utility Maximization with Private Constraint Information",
+      "conference": "IEEE International Conference on Computer Communications (INFOCOM)",
+      "year": 2019,
+      "note": "Best In-Session Presentation Award"
+    }
+  ]
+}

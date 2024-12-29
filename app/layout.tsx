@@ -75,7 +75,7 @@ export const viewport: Viewport = {
 const EmptyLayout: FC<PropsWithChildren> = ({ children }) => (
   <html lang="en">
     <body
-      className={`${font.serif.className} ${font.standardSans.variable} ${font.standardMono.variable} antialiased w-screen h-screen overflow-hidden bg-background text-foreground`}
+      className={`${font.standardSans.variable} ${font.standardMono.variable} antialiased w-screen h-screen overflow-hidden bg-background text-foreground`}
       style={{
         // @ts-expect-error css variables
         '--background': globalTheme.background,
