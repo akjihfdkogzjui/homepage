@@ -1,4 +1,4 @@
-- **Email**: mengzhang@intl.zju.edu.cn
+- **Email**: mengzhang [at] intl.zju.edu.cn _(change \[at\] to @)_
 
 - **Office**: ZJU-UIUC Institute, Zhejiang University
 

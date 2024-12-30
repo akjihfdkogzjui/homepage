@@ -29,13 +29,16 @@ function recurse(dir, cb) {
         data.children = (data.children || []).concat([item]);
       });
     } else {
-      if (name.match(/^page\.tsx$/)) {
+      if (name.match(/^page\.(tsx|jsx?)$/)) {
         cb(data);
       } else if (name === "meta.json") {
         try {
-          const { level } = JSON.parse(readFileSync(fn, { encoding: 'utf-8' }));
+          const { level, hidden } = JSON.parse(readFileSync(fn, { encoding: 'utf-8' }));
           if (typeof level === 'number') {
             data.level = level;
+          }
+          if (hidden) {
+            data.hidden = true;
           }
         } catch (error) {
           console.error(error);

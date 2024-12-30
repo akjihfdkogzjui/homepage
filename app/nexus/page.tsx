@@ -8,7 +8,7 @@ const Layout = ArticlePage();
 export default function Nexus() {
 
   return (
-    <Layout>
+    <Layout title="Nexus">
       <Content />
     </Layout>
   );

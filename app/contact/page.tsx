@@ -8,7 +8,7 @@ const Layout = ArticlePage();
 export default function Contact() {
 
   return (
-    <Layout>
+    <Layout title="Contact">
       <Content />
     </Layout>
   );

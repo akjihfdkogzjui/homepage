@@ -5,7 +5,7 @@ import type { MDXComponents } from "mdx/types";
 import { font } from "@/src/theme";
 
 
-export const mdxComponents: MDXComponents = {
+export const mdxComponents = {
   h1: () => null,
   h2: ({ children }) => <h2 className={`${font.serif.className} text-3xl font-semibold text-foreground my-10`}>{children}</h2>,
   h3: ({ children }) => <h3 className={`${font.serif.className} text-2xl font-medium text-gray-950 my-9`}>{children}</h3>,
@@ -41,7 +41,7 @@ export const mdxComponents: MDXComponents = {
       {children}
     </a>
   ),
-};
+} satisfies MDXComponents;
 
 interface IMDXProps {
   children: string;

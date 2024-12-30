@@ -13,6 +13,7 @@ export interface RouteNode {
   name: string;
   children?: RouteNode[];
   level?: number;
+  hidden?: boolean;
 }
 
 export const getTopPaths = (): LinkItem[] => {
@@ -28,10 +29,12 @@ export const getTopPaths = (): LinkItem[] => {
       const children = allRoutes.children.slice();
       children.sort((a, b) => (b.level ?? 0) - (a.level ?? 0));
       for (const item of children) {
-        list.push({
-          label: item.name,
-          url: item.id,
-        });
+        if (!item.hidden) {
+          list.push({
+            label: item.name,
+            url: item.id,
+          });
+        }
       }
     }
   }

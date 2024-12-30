@@ -4,7 +4,7 @@ import LandingPage from "@/src/layout/landingPage.client";
 
 import siteData from "@constant/site.json";
 
-import Content from "@articles/home.md";
+import Content from "@articles/home.mdx";
 
 
 const Layout = LandingPage({ coverSrc: siteData.ogImage });

@@ -8,7 +8,7 @@ const Layout = ArticlePage();
 export default function Projects() {
 
   return (
-    <Layout>
+    <Layout title="Projects">
       <Content />
     </Layout>
   );
