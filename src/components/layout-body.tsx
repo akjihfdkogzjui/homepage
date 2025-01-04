@@ -24,7 +24,7 @@ const LayoutBody: FC<PropsWithChildren> = ({ children }) => {
   
   return (
     <PageContext.Provider value={pageCtx}>
-      <article className="landscape:max-w-[840px] px-8 mb-64">
+      <article className="landscape:max-w-[840px] px-8 mb-32">
         {title ? (
           <>
             <h1 className="landscape:sr-only text-foreground font-bold text-4xl">{title}</h1>

@@ -1,5 +1,7 @@
 import type { FC } from "react";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import Link from "next/link";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import type { MDXComponents } from "mdx/types";
 
 import { font } from "@/src/theme";
@@ -36,11 +38,40 @@ export const mdxComponents = {
   td: ({ children }) => (
     <td className="border border-gray-300 px-4 py-2">{children}</td>
   ),
-  a: ({ children, href }) => (
-    <a href={href} className="text-blue-600 hover:text-blue-800 underline">
-      {children}
-    </a>
-  ),
+  a: ({ children, href }) => {
+    const isInnerHref = (() => {
+      try {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const _ = new URL(href.replace(/^[a-z]:\/\//, ''));
+        return false;
+      } catch {
+        return true;
+      }
+    })();
+    if (isInnerHref) {
+      return (
+        <Link
+          target="_self"
+          href={href}
+          className="hover:underline focus:underline text-blue-800"
+        >
+          {children}
+        </Link>
+      );
+    }
+    return (
+      <Link
+        href={href}
+        target="_blank"
+        className="hover:underline focus:underline inline-flex items-center space-x-2 group text-blue-800"
+      >
+        <span className="flex-none">
+          {children}
+        </span>
+        <ArrowTopRightOnSquareIcon aria-hidden="true" role="presentation" className="w-4 h-4 flex-none stroke-gray-700 opacity-0 group-hover:opacity-100" />
+      </Link>
+    );
+  },
 } satisfies MDXComponents;
 
 interface IMDXProps {

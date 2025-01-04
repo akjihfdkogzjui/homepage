@@ -3,7 +3,8 @@ import type { Metadata, Viewport } from "next";
 import { headers } from "next/headers";
 
 import NavBar from "@cp/navBar";
-import LayoutBody from "@/src/components/layout-body";
+import LayoutBody from "@cp/layout-body";
+import Footer from "@cp/footer";
 import siteData from "@constant/site.json";
 import profileData from "@constant/profile.json";
 import { font, globalTheme } from "@/src/theme";
@@ -75,7 +76,7 @@ export const viewport: Viewport = {
 };
 
 
-const EmptyLayout: FC<PropsWithChildren> = ({ children }) => (
+const Layout: FC<PropsWithChildren> = ({ children }) => (
   <html lang="en">
     <body
       className={`${font.standardSans.variable} ${font.standardMono.variable} antialiased w-screen h-screen overflow-hidden bg-background text-foreground`}
@@ -96,10 +97,11 @@ const EmptyLayout: FC<PropsWithChildren> = ({ children }) => (
             <div className="hidden landscape:block" />
           </div>
         </main>
+        <Footer />
       </div>
     </body>
   </html>
 );
 
 
-export default EmptyLayout;
+export default Layout;

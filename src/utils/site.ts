@@ -11,6 +11,10 @@ export interface LinkItem {
 export interface RouteNode {
   id: string;
   name: string;
+  description: string;
+  mtime: number;
+  changeFreq: "daily" | "weekly" | "monthly";
+  priority: number;
   children?: RouteNode[];
   level?: number;
   hidden?: boolean;
