@@ -25,6 +25,9 @@ const NavBarPrv: FC<INavBarPrvProps> = ({ navItems, homeLabel, reverseTheme = fa
   const pathname = usePathname();
 
   const [menuOpen, setMenuOpen] = useState(false);
+  
+  useEffect(() => setMenuOpen(false), [pathname]);
+
   const [isPortrait, setIsPortrait] = useState(false);
   useEffect(() => {
     const orientationQuery = window.matchMedia('(orientation: portrait)');

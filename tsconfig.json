@@ -21,8 +21,8 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "@constant/*": ["./content/constant/*"],
-      "@articles/*": ["./content/articles/*"],
+      "@constant/*": ["./src/constant/*"],
+      "@articles/*": ["./src/articles/*"],
       "@cp/*": ["./src/components/*"],
       "@utils/*": ["./src/utils/*"]
     }

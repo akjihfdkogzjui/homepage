@@ -1,6 +1,21 @@
-Meng Zhang is an Assistant Professor at the ZJU-UIUC Institute, Zhejiang University.
+import Image from "next/image";
 
-His research interests include wireless and computer networks, optimization for intelligent networks, edge intelligence, and decentralized machine learning.
+<div className="portrait:bg-background landscape:bg-white landscape:px-8 py-3 portrait:pt-0 portrait:-mt-px landscape:py-6 rounded-sm overflow-hidden portrait:-mb-8">
+  <h2 className="sr-only">About</h2>
+  <div className="flex flex-col landscape:flex-row items-center justify-center landscape:m-4 portrait:space-y-2 landscape:space-x-10">
+    <div className="flex-none w-full landscape:w-[40%] landscape:max-w-48">
+      <Image alt="Meng Zhang" src="/MengZhang-rect.jpg" width="512" height="512" className="max-w-36 landscape:max-w-48 portrait:mt-2 mx-auto rounded-full overflow-hidden" />
+    </div>
+    <div>
+      <p className="my-2 leading-7 text-gray-900">Meng Zhang is an Assistant Professor at the ZJU-UIUC Institute, Zhejiang University.</p>
+      <p className="my-2 leading-7 text-gray-900">His research interests include wireless and computer networks, optimization for intelligent networks, edge intelligence, and decentralized machine learning.</p>
+    </div>
+  </div>
+  <div className="mt-2 landscape:p-2 landscape:mt-8 landscape:space-y-2">
+    <h3><span aria-hidden="true" className="inline-block px-1 select-none">{String.fromCodePoint(0x25c6)}</span>Keywords of Research</h3>
+    <p className="my-2 leading-7 text-gray-900">Wireless and computer networks | <wbr/>optimization for intelligent networks | <wbr/>edge intelligence | <wbr/>decentralized machine learning</p>
+  </div>
+</div>
 
 ## Biography
 
@@ -26,7 +41,7 @@ Meng Zhang leads the **[Nexus Lab](/nexus)** at Zhejiang University, focusing on
 
 ## Recent Publications
 
-import publications from "../content/constant/publications";
+import publications from "../src/constant/publications";
 import PublicationList from "../src/components/publicationList";
 
 <PublicationList publications={publications.Journal_Papers.concat(publications.Conference_Papers)} limit={5} />

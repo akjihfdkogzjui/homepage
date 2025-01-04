@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next";
 import { headers } from "next/headers";
 
 import NavBar from "@cp/navBar";
+import LayoutBody from "@/src/components/layout-body";
 import siteData from "@constant/site.json";
 import profileData from "@constant/profile.json";
 import { font, globalTheme } from "@/src/theme";
@@ -89,10 +90,9 @@ const EmptyLayout: FC<PropsWithChildren> = ({ children }) => (
         <main className="w-full overflow-x-hidden">
           <div className="grid grid3">
             <div className="hidden landscape:block" />
-            <article className="landscape:max-w-[840px] px-8 mb-64">
-              <hr className="landscape:hidden" />
+            <LayoutBody>
               {children}
-            </article>
+            </LayoutBody>
             <div className="hidden landscape:block" />
           </div>
         </main>
