@@ -9,7 +9,6 @@ import { Bars3Icon, ChevronLeftIcon, ChevronRightIcon, XMarkIcon } from "@heroic
 import type { LinkItem } from "@utils/site";
 import Button from "@cp/button.client";
 import { font, globalTheme } from "@/src/theme";
-// import Searchbox from "./searchBox.client";
 
 import "./navBar.css";
 
@@ -188,7 +187,7 @@ const NavBarPrv: FC<INavBarPrvProps> = ({ navItems, homeLabel, reverseTheme = fa
                           '--foreground': reverseTheme ? globalTheme.foreground : globalTheme.background,
                         } : undefined}
                       >
-                        <span className="uppercase select-none">
+                        <span className="capitalize select-none">
                           {item.label}
                         </span>
                       </Link>
@@ -242,10 +241,6 @@ const NavBarPrv: FC<INavBarPrvProps> = ({ navItems, homeLabel, reverseTheme = fa
               )
             }
           </nav>
-          {/* Search */}
-          {/* <div className="flex-none">
-            <Searchbox />
-          </div> */}
         </div>
       </header>
       {/* Sidebar */}
@@ -296,7 +291,7 @@ const NavBarPrv: FC<INavBarPrvProps> = ({ navItems, homeLabel, reverseTheme = fa
                           '--foreground': globalTheme.background,
                         } : undefined}
                       >
-                        <span className="uppercase select-none">
+                        <span className="capitalize select-none">
                           {item.label}
                         </span>
                       </Link>

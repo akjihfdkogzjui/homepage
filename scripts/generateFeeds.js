@@ -29,7 +29,7 @@ function recurse(dir, cb) {
         data.children = (data.children || []).concat([item]);
       });
     } else {
-      if (name.match(/^page\.(tsx|jsx?)$/)) {
+      if (name.match(/^page\.(tsx|jsx?|mdx?)$/)) {
         cb(data);
       } else if (name === "meta.json") {
         try {

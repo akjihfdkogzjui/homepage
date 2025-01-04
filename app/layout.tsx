@@ -2,6 +2,7 @@ import { type FC, type PropsWithChildren } from "react";
 import type { Metadata, Viewport } from "next";
 import { headers } from "next/headers";
 
+import NavBar from "@cp/navBar";
 import siteData from "@constant/site.json";
 import profileData from "@constant/profile.json";
 import { font, globalTheme } from "@/src/theme";
@@ -83,7 +84,19 @@ const EmptyLayout: FC<PropsWithChildren> = ({ children }) => (
         '--foreground': globalTheme.foreground,
       }}
     >
-      {children}
+      <NavBar homeLabel={`${profileData.fullName}, ${profileData.title}`} />
+      <div className="relative w-full h-full my-4 overflow-x-hidden overflow-y-scroll scroll-style-none py-16" id="body">
+        <main className="w-full overflow-x-hidden">
+          <div className="grid grid3">
+            <div className="hidden landscape:block" />
+            <article className="landscape:max-w-[840px] px-8 mb-64">
+              <hr className="landscape:hidden" />
+              {children}
+            </article>
+            <div className="hidden landscape:block" />
+          </div>
+        </main>
+      </div>
     </body>
   </html>
 );
