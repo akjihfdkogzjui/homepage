@@ -1,6 +1,9 @@
 "use client";
 
-import { type HTMLAttributes, type FC, useCallback, useState, KeyboardEventHandler } from "react";
+import { type HTMLAttributes, type FC, useCallback, useState, KeyboardEventHandler, ComponentProps, useRef, useEffect } from "react";
+import { CheckIcon, ClipboardDocumentIcon, XMarkIcon } from "@heroicons/react/16/solid";
+
+import { copyToClipboard } from "@utils/clipboard";
 
 
 interface IButtonProps {
@@ -41,6 +44,50 @@ const Button: FC<IButtonProps & Omit<HTMLAttributes<HTMLButtonElement>, keyof IB
     >
       {children}
     </button>
+  );
+};
+
+export const CopyButton: FC<{ text: string } & Omit<ComponentProps<typeof Button>, "children">> = ({ text, className = "", ...props }) => {
+  const [status, setStatus] = useState<"ready" | "failed" | "succeeded">("ready");
+
+  const textRef = useRef(text);
+  textRef.current = text;
+
+  const timerRef = useRef<NodeJS.Timeout>(null);
+
+  const handler = useCallback(async () => {
+    if (await copyToClipboard(textRef.current)) {
+      setStatus('succeeded');
+    } else {
+      setStatus('failed');
+    }
+    timerRef.current = setTimeout(() => {
+      setStatus('ready');
+    }, 400);
+  }, []);
+
+  useEffect(() => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+    }
+  }, []);
+
+  const Icon = ({
+    ready: ClipboardDocumentIcon,
+    failed: XMarkIcon,
+    succeeded: CheckIcon,
+  } as const)[status];
+
+  const cn = ({
+    ready: className,
+    failed: `${className.replaceAll(/\W([a-zA-Z0-9\/]+:)?bg-[^\s]+/g, "")} bg-red-600`,
+    succeeded: `${className.replaceAll(/\W([a-zA-Z0-9\/]+:)?bg-[^\s]+/g, "")} bg-green-600`,
+  } as const)[status];
+
+  return (
+    <Button {...props} className={cn} onTrigger={handler}>
+      <Icon aria-label="Copy e-mail address to clipboard" title="Copy e-mail address to clipboard" className="inline-block select-none w-4 h-4" />
+    </Button>
   );
 };
 

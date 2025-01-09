@@ -1,9 +1,28 @@
-import { PageTitle } from "../../src/components/layout-body";
+import { PageTitle } from "@cp/layout-body";
 
 <PageTitle>Contact</PageTitle>
 
-- **Email**: mengzhang [at] intl.zju.edu.cn _(change \[at\] to @)_
+import profileData from "@constant/profile.json";
+import { CopyButton } from "@cp/button.client";
+
+
+- **Email**: {profileData.email.replace("@", " [at] ")} <CopyButton className="inline-flex mr-4 text-white bg-gray-600/40 hover:bg-blue-600/40 focus:bg-blue-600/40 w-5 h-5 rounded flex-row items-center justify-center" text={profileData.email} /> _(change \[at\] to @)_
 
 - **Office**: ZJU-UIUC Institute, Zhejiang University
 
 - **Google Scholar**: [Meng Zhang's Profile](https://scholar.google.com/citations?user=CEKASm8AAAAJ)
+
+
+## Access
+
+<p className="my-6 leading-5">
+  <small>International Campus, Zhejiang University, Haining, No.718 East Haizhou Rd. [Visitor guide](https://zjui.intl.zju.edu.cn/en/campus/visit/1118)</small>
+</p>
+
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3437.2615146237936!2d120.7224197118606!3d30.513643496081183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzDCsDMwJzQ5LjEiTiAxMjDCsDQzJzMwLjAiRQ!5e0!3m2!1sja!2sjp!4v1736438636815!5m2!1sja!2sjp"
+  className="border -mx-px w-full h-[calc(160px+24vw)]"
+  allowFullScreen={false}
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+/>

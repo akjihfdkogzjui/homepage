@@ -1,6 +1,14 @@
 {
-  "footer": {
-    "google_scholar": "https://scholar.google.com/citations?user=a1wBDJsAAAAJ&hl=en",
-    "Zhang Meng @ZUFE": "https://person.zju.edu.cn/mengzhang"
+  "external": {
+    "GitHub": "#",
+    "google_scholar": "https://scholar.google.com/citations?user=a1wBDJsAAAAJ&hl=en"
+  },
+  "office": {
+    "ZJU-UIUC Institute": "https://zjui.intl.zju.edu.cn/en",
+    "Zhang Meng @ZJU": "https://zjui.intl.zju.edu.cn/en/node/1651",
+    "Zhang Meng @ZJU (Chinese)": "https://person.zju.edu.cn/mengzhang"
+  },
+  "contact": {
+    "email": "mailto:mengzhang@intl.zju.edu.cn"
   }
 }

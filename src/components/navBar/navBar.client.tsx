@@ -253,7 +253,7 @@ const NavBarPrv: FC<INavBarPrvProps> = ({ navItems, homeLabel, reverseTheme = fa
         role="presentation"
         onClick={menuOpen ? onClickMenuButton : undefined}
       />
-      <aside className={`landscape:hidden ${menuOpen ? 'translate-x-0' : '-translate-x-full pointer-events-none'} transition-transform shadow-md fixed z-50 left-0 top-0 bottom-0 bg-background h-full min-w-[33vw] max-w-[55vw] p-2 flex flex-col items-center justify-stretch text-lg ${font.serif.className} whitespace-nowrap`}>
+      <div className={`landscape:hidden ${menuOpen ? 'translate-x-0' : '-translate-x-full pointer-events-none'} transition-transform shadow-md fixed z-50 left-0 top-0 bottom-0 bg-background h-full min-w-[33vw] max-w-[55vw] p-2 flex flex-col items-center justify-stretch text-lg ${font.serif.className} whitespace-nowrap`}>
         <div className="flex-none w-full flex flex-col">
           <div className="flex-none mr-2 w-[2.2em] flex overflow-hidden">
             <Button
@@ -305,7 +305,7 @@ const NavBarPrv: FC<INavBarPrvProps> = ({ navItems, homeLabel, reverseTheme = fa
             </ul>
           </nav>
         </div>
-      </aside>
+      </div>
     </>
   );
 };

@@ -1,6 +1,11 @@
 import { black, white } from "@/tailwind.config";
-import { Geist, Geist_Mono, Zilla_Slab } from "next/font/google";
+import { Geist, Geist_Mono, Noto_Znamenny_Musical_Notation, Zilla_Slab } from "next/font/google";
 
+
+const notoSans = Noto_Znamenny_Musical_Notation({
+  weight: "400",
+  subsets: ["latin", "math"],
+});
 
 const standardSans = Geist({
   variable: "--font-geist-sans",
@@ -18,6 +23,7 @@ const serif = Zilla_Slab({
 });
 
 export const font = {
+  notoSans,
   standardSans,
   standardMono,
   serif,

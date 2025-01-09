@@ -79,7 +79,7 @@ export const viewport: Viewport = {
 const Layout: FC<PropsWithChildren> = ({ children }) => (
   <html lang="en">
     <body
-      className={`${font.standardSans.variable} ${font.standardMono.variable} antialiased w-screen h-screen overflow-hidden bg-background text-foreground`}
+      className={`${font.notoSans.className} ${font.standardSans.variable} ${font.standardMono.variable} antialiased w-screen h-screen overflow-hidden bg-background text-foreground`}
       style={{
         // @ts-expect-error css variables
         '--background': globalTheme.background,
@@ -87,16 +87,12 @@ const Layout: FC<PropsWithChildren> = ({ children }) => (
       }}
     >
       <NavBar homeLabel={`${profileData.fullName}, ${profileData.title}`} />
-      <div className="relative w-full h-full my-4 overflow-x-hidden overflow-y-scroll scroll-style-none py-16" id="body">
-        <main className="w-full overflow-x-hidden">
-          <div className="grid grid3">
-            <div className="hidden landscape:block" />
-            <LayoutBody>
-              {children}
-            </LayoutBody>
-            <div className="hidden landscape:block" />
-          </div>
-        </main>
+      <div className="relative w-full h-full my-12 overflow-x-hidden overflow-y-scroll scroll-style-none pt-0 pb-16" id="body">
+        <div className="w-full overflow-x-hidden">
+          <LayoutBody>
+            {children}
+          </LayoutBody>
+        </div>
         <Footer />
       </div>
     </body>
