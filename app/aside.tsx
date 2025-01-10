@@ -53,14 +53,14 @@ const aside = (
             <CopyButton className="flex-none text-white bg-gray-600/40 hover:bg-blue-600/40 focus:bg-blue-600/40 w-5 h-5 rounded flex flex-row items-center justify-center" text={profileData.email} />
           </div>
         </dd>
-        <dt>
+        {/* <dt>
           <svg aria-label="GitHub" className="inline-block select-none w-4 h-4 opacity-80" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 2C6.48 2 2 6.48 2 12c0 4.41 2.87 8.15 6.84 9.47.5.09.66-.22.66-.48 0-.24-.01-.87-.01-1.71-2.78.61-3.37-1.34-3.37-1.34-.45-1.14-1.11-1.44-1.11-1.44-.91-.62.07-.61.07-.61 1.01.07 1.54 1.03 1.54 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.29.1-2.7 0 0 .84-.27 2.75 1.02A9.58 9.58 0 0 1 12 6.8c.85.004 1.71.12 2.52.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.41.2 2.44.1 2.7.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.91.68 1.84 0 1.33-.01 2.4-.01 2.73 0 .26.17.58.67.48A10.002 10.002 0 0 0 22 12c0-5.52-4.48-10-10-10z" />
           </svg>
         </dt>
         <dd>
           <Link href={linksData.external.GitHub} target="_blank" className="hover:underline">GitHub</Link>
-        </dd>
+        </dd> */}
         <dt>
           <AcademicCapIcon aria-label="Google Scholar" title="Google Scholar" className="inline-block select-none w-4 h-4 opacity-80" />
         </dt>

@@ -57,8 +57,8 @@ const Footer: FC = () => {
         <hr className="flex-none w-full" />
         <div className="flex-none w-full mt-12 mb-8 space-y-4">
           <div className="w-full flex flex-row items-center justify-center space-x-8 text-sm text-gray-600 px-6">
-            <Link href="/rss.xml" target="_blank" title="RSS" className="inline-flex items-center space-x-2 hover:underline">
-              <RssIcon aria-hidden="true" className="w-4 h-4" />
+            <Link href="/rss.xml" target="_blank" title="RSS" className="inline-flex items-center space-x-1.5 hover:underline">
+              <RssIcon aria-hidden="true" className="w-3 h-3" />
               <span>RSS</span>
             </Link>
             <Link href="/sitemap.xml" target="_blank" className="hover:underline">

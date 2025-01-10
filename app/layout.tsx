@@ -79,15 +79,16 @@ export const viewport: Viewport = {
 const Layout: FC<PropsWithChildren> = ({ children }) => (
   <html lang="en">
     <body
-      className={`${font.notoSans.className} ${font.standardSans.variable} ${font.standardMono.variable} antialiased w-screen h-screen overflow-hidden bg-background text-foreground`}
+      className={`${font.notoSans.className} ${font.standardSans.variable} ${font.standardMono.variable} antialiased w-screen min-h-screen overflow-x-hidden overflow-y-scroll bg-background text-foreground`}
       style={{
         // @ts-expect-error css variables
         '--background': globalTheme.background,
         '--foreground': globalTheme.foreground,
       }}
+      id="body"
     >
       <NavBar homeLabel={`${profileData.fullName}, ${profileData.title}`} />
-      <div className="relative w-full h-full my-12 overflow-x-hidden overflow-y-scroll scroll-style-none pt-0 pb-16" id="body">
+      <div className="relative w-full h-full my-12 overflow-hidden scroll-style-none pt-0 pb-16">
         <div className="w-full overflow-x-hidden">
           <LayoutBody>
             {children}
