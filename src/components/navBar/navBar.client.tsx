@@ -8,6 +8,7 @@ import { Bars3Icon, ChevronLeftIcon, ChevronRightIcon, XMarkIcon } from "@heroic
 
 import type { LinkItem } from "@utils/site";
 import Button from "@cp/button.client";
+import ArticleProgress from "@cp/article-progress.client";
 import { font, globalTheme } from "@/src/theme";
 
 import "./navBar.css";
@@ -127,11 +128,11 @@ const NavBarPrv: FC<INavBarPrvProps> = ({ navItems, homeLabel, reverseTheme = fa
   const reverse = reverseTheme !== (transparentAtTop && reverseTransparentTheme && atTop);
 
   return (
-    <>
+    <div className="fixed top-0 left-0 right-0 z-30">
       {/* Nav bar */}
       <header
         className={`w-full pl-2 flex flex-row items-center justify-stretch text-lg text-foreground
-          ${font.serif.className} whitespace-nowrap fixed top-0 left-0 right-0 z-30
+          ${font.serif.className} whitespace-nowrap relative
           ${transparentAtTop && atTop ? 'bg-transparent' : 'bg-background'} transition-colors duration-300
         `}
         style={reverse ? {
@@ -246,6 +247,7 @@ const NavBarPrv: FC<INavBarPrvProps> = ({ navItems, homeLabel, reverseTheme = fa
           </nav>
         </div>
       </header>
+      <ArticleProgress />
       {/* Sidebar */}
       <div
         className={`fixed z-50 inset-0 bg-black ${menuOpen ? 'opacity-50' : 'opacity-0 pointer-events-none'} transition-opacity`}
@@ -306,7 +308,7 @@ const NavBarPrv: FC<INavBarPrvProps> = ({ navItems, homeLabel, reverseTheme = fa
           </nav>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/next";
 import NavBar from "@cp/navBar";
 import LayoutBody from "@cp/layout-body";
 import Footer from "@cp/footer";
+import BackToTopButton from "@cp/back-to-top-button";
 import siteData from "@constant/site.json";
 import profileData from "@constant/profile.json";
 import { font, globalTheme } from "@/src/theme";
@@ -88,14 +89,15 @@ const Layout: FC<PropsWithChildren> = ({ children }) => (
       id="body"
     >
       <NavBar homeLabel={`${profileData.fullName}, ${profileData.title}`} />
-      <div className="relative w-full h-full my-12 overflow-hidden scroll-style-none pt-0 pb-16">
-        <div className="w-full overflow-x-hidden">
+      <div className="relative w-full h-full mt-16 mb-0 overflow-hidden scroll-style-none py-0">
+        <div className="w-full overflow-x-hidden" id="main">
           <LayoutBody>
             {children}
           </LayoutBody>
         </div>
         <Footer />
       </div>
+      <BackToTopButton />
       <Analytics />
     </body>
   </html>
