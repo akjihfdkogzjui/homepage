@@ -43,4 +43,5 @@ next-env.d.ts
 # auto-generated
 /public/rss.xml
 /public/sitemap.xml
+/public/robots.txt
 /public/build/**/*

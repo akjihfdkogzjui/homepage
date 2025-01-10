@@ -53,7 +53,7 @@ export const mdxComponents = {
         <Link
           target="_self"
           href={href}
-          className="hover:underline focus:underline text-blue-800"
+          className="hover:underline text-blue-800"
         >
           {children}
         </Link>
@@ -63,7 +63,7 @@ export const mdxComponents = {
       <Link
         href={href}
         target="_blank"
-        className="hover:underline focus:underline inline-flex items-center space-x-2 group text-blue-800"
+        className="hover:underline inline-flex items-center space-x-2 group text-blue-800"
       >
         <span className="flex-none">
           {children}

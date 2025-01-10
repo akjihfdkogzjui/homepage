@@ -12,7 +12,7 @@ const News: FC = async () => {
       {news.map(n => {
         return (
           <li key={n.url} className="py-2 border-b">
-            <Link href={n.url} target="_blank" className="hover:underline focus:underline">
+            <Link href={n.url} target="_blank" className="hover:underline">
               {n.title}
             </Link>
           </li>

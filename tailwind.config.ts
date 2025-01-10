@@ -38,7 +38,7 @@ function interpolateColor(color1: string, color2: string, t: number): string {
   return rgbToHex(r, g, b);
 }
 
-export const white = "#f9f9f9";
+export const white = "#fcfcfc";
 export const black = "#161616";
 
 export default {

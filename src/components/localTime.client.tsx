@@ -22,7 +22,7 @@ const LocalTime: FC<{ z: number }> = ({ z }) => {
   }, []);
 
   if (curTime === 0) {
-    return null;
+    return <span>--</span>;
   }
 
   const tarTime = curTime + (z - curTimeZone) * 1_000 * 60 * 60;

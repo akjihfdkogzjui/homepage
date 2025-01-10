@@ -1,6 +1,6 @@
 "use client";
 
-import { type HTMLAttributes, type FC, useCallback, useState, KeyboardEventHandler, ComponentProps, useRef, useEffect } from "react";
+import { type HTMLAttributes, type FC, useCallback, useState, type KeyboardEventHandler, type ComponentProps, useRef, useEffect } from "react";
 import { CheckIcon, ClipboardDocumentIcon, XMarkIcon } from "@heroicons/react/16/solid";
 
 import { copyToClipboard } from "@utils/clipboard";
@@ -47,7 +47,7 @@ const Button: FC<IButtonProps & Omit<HTMLAttributes<HTMLButtonElement>, keyof IB
   );
 };
 
-export const CopyButton: FC<{ text: string } & Omit<ComponentProps<typeof Button>, "children">> = ({ text, className = "", ...props }) => {
+export const CopyButton: FC<{ text: string } & Omit<ComponentProps<typeof Button>, "children" | "onTrigger">> = ({ text, className = "", ...props }) => {
   const [status, setStatus] = useState<"ready" | "failed" | "succeeded">("ready");
 
   const textRef = useRef(text);
@@ -85,8 +85,8 @@ export const CopyButton: FC<{ text: string } & Omit<ComponentProps<typeof Button
   } as const)[status];
 
   return (
-    <Button {...props} className={cn} onTrigger={handler}>
-      <Icon aria-label="Copy e-mail address to clipboard" title="Copy e-mail address to clipboard" className="inline-block select-none w-4 h-4" />
+    <Button {...props} className={cn} onTrigger={handler} aria-label="Copy e-mail address to clipboard" title="Copy e-mail address to clipboard">
+      <Icon aria-hidden="true" className="inline-block select-none w-4 h-4" />
     </Button>
   );
 };

@@ -41,9 +41,8 @@ export async function generateMetadata(): Promise<Metadata> {
     keywords: siteData.keywords,
     referrer: "strict-origin-when-cross-origin",
     robots: {
-      // TODO: set to true when publish
-      index: false, // true,
-      follow: false, // true,
+      index: process.env.DEPLOY_MODE === 'public',
+      follow: process.env.DEPLOY_MODE === 'public',
     },
     openGraph: {
       type: "profile",

@@ -8,9 +8,12 @@ const appDir = path.resolve(baseDir, 'app');
 const publicDir = path.resolve(baseDir, 'public');
 const rssFileName = path.resolve(publicDir, 'rss.xml');
 const sitemapFileName = path.resolve(publicDir, 'sitemap.xml');
+const robotsTxtFileName = path.resolve(publicDir, 'robots.txt');
 
 const outputDir = path.resolve(publicDir, 'build');
 const jsonFileName = path.resolve(outputDir, 'all-routes.json');
+
+const siteData = require("../src/constant/site.json");
 
 /**
  * @param {string} dir 
@@ -23,6 +26,7 @@ function recurse(dir, cb) {
     id: `/${path.relative(appDir, dir).replaceAll(/\\/g, '/')}`,
     name: seg[seg.length - 1],
     mtime: NaN,
+    changeFreq: "weekly",
   };
   data.name = data.name.slice(0, 1).toUpperCase() + data.name.slice(1);
   const ls = readdirSync(dir);
@@ -89,9 +93,9 @@ function generateRSS(baseUrl, posts) {
   const rssXml = `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
   <channel>
-    <title>My Blog RSS</title>
+    <title>${siteData.seoName} RSS</title>
     <link>${baseUrl}</link>
-    <description>My Blog RSS Feed</description>
+    <description>${siteData.seoName} Feed</description>
 ${posts.map(post => `   <item>
       <title>${post.name}</title>
       <link>${baseUrl}${post.id}</link>
@@ -122,6 +126,41 @@ ${pages.map((page) => `  <url>
   writeFileSync(sitemapFileName, sitemapXml, 'utf-8');
 }
 
+/**
+ * @param {string} baseUrl
+ */
+function generateRobotsTxt(baseUrl) {
+  const content = `User-agent: *
+Disallow: /admin/
+Disallow: /search?
+Disallow: /tmp/
+Disallow: /*?*
+Allow: /public/
+Crawl-delay: 10
+
+User-agent: Googlebot
+Allow: /
+Disallow: /no-google/
+Crawl-delay: 5
+
+User-agent: Bingbot
+Allow: /
+Disallow: /no-bing/
+Crawl-delay: 10
+
+User-agent: AhrefsBot
+Disallow: /
+User-agent: MJ12bot
+Disallow: /
+User-agent: SemrushBot
+Disallow: /
+
+Sitemap: ${baseUrl}/sitemap.xml
+`;
+
+  writeFileSync(robotsTxtFileName, content, 'utf-8');
+}
+
 function main() {
   /** @type {import('../src/utils/site').RouteNode} */
   let routeTree = {};
@@ -136,10 +175,11 @@ function main() {
   writeFileSync(jsonFileName, JSON.stringify(routeTree, undefined, 2), { encoding: 'utf-8' });
 
   const posts = node2List(routeTree);
-  const baseUrl = "https://example.com";  // FIXME: base url
+  const baseUrl = process.env.DEPLOY_DOMAIN.replace(/\/$/, '');
 
   generateRSS(baseUrl, posts);
   generateSitemap(baseUrl, posts);
+  generateRobotsTxt(baseUrl);
 }
 
 

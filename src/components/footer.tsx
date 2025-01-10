@@ -22,7 +22,7 @@ const Footer: FC = () => {
                     key={id}
                     href={href}
                     target="_blank"
-                    className="hover:underline focus:underline inline-flex items-center space-x-2 group portrait:my-1"
+                    className="hover:underline inline-flex items-center space-x-2 group portrait:my-1"
                   >
                     <span className="flex-none ml-6 text-gray-800">
                       {id.replaceAll(/_/g, ' ').replaceAll(/(^|\W)[a-z]/g, v => v.toLocaleUpperCase())}
@@ -42,7 +42,7 @@ const Footer: FC = () => {
                     key={id}
                     href={href}
                     target="_blank"
-                    className="hover:underline focus:underline inline-flex items-center space-x-2 group portrait:my-1"
+                    className="hover:underline inline-flex items-center space-x-2 group portrait:my-1"
                   >
                     <span className="flex-none ml-6 text-gray-800">
                       {id.replaceAll(/_/g, ' ').replaceAll(/(^|\W)[a-z]/g, v => v.toLocaleUpperCase())}
@@ -56,12 +56,16 @@ const Footer: FC = () => {
         </div>
         <hr className="flex-none w-full" />
         <div className="flex-none w-full mt-12 mb-8 space-y-4">
-          <div className="w-full flex flex-row items-center justify-center space-x-4 text-sm text-gray-600 px-6">
-            <Link href="/rss.xml" target="_blank" title="RSS">
-              <RssIcon aria-label="RSS" className="w-4 h-4" />
+          <div className="w-full flex flex-row items-center justify-center space-x-8 text-sm text-gray-600 px-6">
+            <Link href="/rss.xml" target="_blank" title="RSS" className="inline-flex items-center space-x-2 hover:underline">
+              <RssIcon aria-hidden="true" className="w-4 h-4" />
+              <span>RSS</span>
             </Link>
-            <Link href="/sitemap.xml" target="_blank">
+            <Link href="/sitemap.xml" target="_blank" className="hover:underline">
               <span>Sitemap</span>
+            </Link>
+            <Link href="/robots.txt" target="_blank" className="hover:underline">
+              <span>Robots.txt</span>
             </Link>
           </div>
           <div className="w-full text-center">
