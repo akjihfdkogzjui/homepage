@@ -1,6 +1,7 @@
 import { type FC, type PropsWithChildren } from "react";
 import type { Metadata, Viewport } from "next";
 import { headers } from "next/headers";
+import { Analytics } from "@vercel/analytics/next";
 
 import NavBar from "@cp/navBar";
 import LayoutBody from "@cp/layout-body";
@@ -94,6 +95,7 @@ const Layout: FC<PropsWithChildren> = ({ children }) => (
         </div>
         <Footer />
       </div>
+      <Analytics />
     </body>
   </html>
 );

@@ -15,7 +15,7 @@ const Footer: FC = () => {
         <div className="flex-none w-full my-12 mx-auto px-8 flex flex-row flex-wrap items-start justify-center">
           <dl className={`flex-none mx-4 my-6 flex flex-col items-center space-y-4 ${font.serif.className}`}>
             <dt className="text-lg">External Links</dt>
-            <dd className="flex flex-col items-center space-y-1">
+            <dd className="flex flex-col items-center space-y-0.5">
               {Object.entries(linksData.external).map(([id, href]) => {
                 return (
                   <Link
@@ -27,7 +27,7 @@ const Footer: FC = () => {
                     <span className="flex-none ml-6 text-gray-800">
                       {id.replaceAll(/_/g, ' ').replaceAll(/(^|\W)[a-z]/g, v => v.toLocaleUpperCase())}
                     </span>
-                    <ArrowTopRightOnSquareIcon aria-hidden="true" role="presentation" className="w-4 h-4 flex-none stroke-gray-700 opacity-0 group-hover:opacity-100" />
+                    <ArrowTopRightOnSquareIcon aria-hidden="true" role="presentation" className="w-3 h-3 flex-none stroke-gray-700" />
                   </Link>
                 );
               })}
@@ -35,7 +35,7 @@ const Footer: FC = () => {
           </dl>
           <dl className={`flex-none mx-4 my-6 flex flex-col items-center space-y-4 ${font.serif.className}`}>
             <dt className="text-lg">Official Website</dt>
-            <dd className="flex flex-col items-center space-y-1">
+            <dd className="flex flex-col items-center space-y-0.5">
               {Object.entries(linksData.office).map(([id, href]) => {
                 return (
                   <Link
@@ -47,7 +47,7 @@ const Footer: FC = () => {
                     <span className="flex-none ml-6 text-gray-800">
                       {id.replaceAll(/_/g, ' ').replaceAll(/(^|\W)[a-z]/g, v => v.toLocaleUpperCase())}
                     </span>
-                    <ArrowTopRightOnSquareIcon aria-hidden="true" role="presentation" className="w-4 h-4 flex-none stroke-gray-700 opacity-0 group-hover:opacity-100" />
+                    <ArrowTopRightOnSquareIcon aria-hidden="true" role="presentation" className="w-3 h-3 flex-none stroke-gray-700" />
                   </Link>
                 );
               })}

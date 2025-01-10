@@ -63,12 +63,12 @@ export const mdxComponents = {
       <Link
         href={href}
         target="_blank"
-        className="hover:underline inline-flex items-center space-x-2 group text-blue-800"
+        className="hover:underline inline-flex items-center space-x-0.5 group text-blue-800"
       >
         <span className="flex-none">
           {children}
         </span>
-        <ArrowTopRightOnSquareIcon aria-hidden="true" role="presentation" className="w-4 h-4 flex-none stroke-gray-700 opacity-0 group-hover:opacity-100" />
+        <ArrowTopRightOnSquareIcon aria-hidden="true" role="presentation" className="w-3 h-3 flex-none stroke-blue-700" />
       </Link>
     );
   },
