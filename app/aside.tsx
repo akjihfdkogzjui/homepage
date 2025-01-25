@@ -45,7 +45,7 @@ const aside = (
         </dt>
         <dd className="space-x-4">
           <InlineEmail value={profileData.email} />
-          <small className="hidden landscape:inline-block italic text-xs text-gray-400">(Replace [at] with @)</small>
+          <small className="hidden landscape:inline-block landscape:xl:hidden italic text-xs text-gray-400">(Replace [at] with @)</small>
         </dd>
         {/* <dt>
           <svg aria-label="GitHub" className="inline-block select-none w-4 h-4 opacity-80" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
