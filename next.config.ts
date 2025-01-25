@@ -11,6 +11,24 @@ const withMDX = NextMDX({
 });
 
 const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'static.xx.fbcdn.net',
+        pathname: '/rsrc.php/yx/r/e9sqr8WnkCf.ico'
+      },
+      {
+        protocol: 'https',
+        hostname: 'scholar.google.com',
+        pathname: '/favicon.ico',
+      },
+    ],
+  },
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
   webpack(config, { dev, isServer }) {
     const cmdUpdateFeeds = 'node scripts/generateFeeds.js';

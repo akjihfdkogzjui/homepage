@@ -3,10 +3,10 @@ import { PageTitle } from "@cp/layout-body";
 <PageTitle>Contact</PageTitle>
 
 import profileData from "@constant/profile.json";
-import { CopyButton } from "@cp/button.client";
+import InlineEmail from "@cp/inline-email.client";
 
 
-- **Email**: {profileData.email.replace("@", " [at] ")} <CopyButton className="inline-flex mr-4 text-white bg-gray-600/40 hover:bg-blue-600/40 focus:bg-blue-600/40 w-5 h-5 rounded flex-row items-center justify-center" text={profileData.email} /> _(change \[at\] to @)_
+- **Email**: <InlineEmail value={profileData.email} /> _(change \[at\] to @)_
 
 - **Office**: ZJU-UIUC Institute, Zhejiang University
 

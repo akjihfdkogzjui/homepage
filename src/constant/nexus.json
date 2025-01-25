@@ -1,0 +1,153 @@
+[
+  {
+    "label": "Postdoctoral Researchers",
+    "people": [
+      {
+        "label": "2021 Cohort",
+        "people": [
+          {
+            "name": "Shengbin CAO",
+            "alias": "曹圣彬",
+            "coverSrc": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=720&auto=format&fit=crop",
+            "title": "Postdoctoral Fellow *",
+            "desc": "* Ph.D. in City U. Hong Kong, Co-Training Advisor: Prof. 杨 浩",
+            "links": {
+              "github": "#",
+              "googleScholar": "#",
+              "x": "#",
+              "facebook": "#"
+            },
+            "email": "xxx@example.com"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Doctoral Students",
+    "people": [
+      {
+        "label": "2022 Cohort",
+        "people": [
+          {
+            "name": "Mengqiu ZHOU",
+            "alias": "周梦秋",
+            "coverSrc": "https://images.unsplash.com/photo-1530268729831-4b0b9e170218?q=80&w=720&auto=format&fit=crop",
+            "title": "Ph.D. Student",
+            "links": {
+              "github": "#",
+              "googleScholar": "#",
+              "x": "#",
+              "facebook": "#"
+            },
+            "email": "xxx@example.com"
+          }
+        ]
+      },
+      {
+        "label": "2023 Cohort",
+        "people": [
+          {
+            "name": "Qiyuan WANG",
+            "alias": "王启元",
+            "coverSrc": "https://images.unsplash.com/photo-1521119989659-a83eee488004?q=80&w=720&auto=format&fit=crop",
+            "title": "Ph.D. Student",
+            "links": {
+              "github": "#",
+              "googleScholar": "#",
+              "x": "#",
+              "facebook": "#"
+            },
+            "email": "xxx@example.com"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Master's Students",
+    "people": [
+      {
+        "label": "2022 Cohort",
+        "people": [
+          {
+            "name": "Lvdong JIN",
+            "alias": "金吕栋",
+            "coverSrc": "https://images.unsplash.com/photo-1492447166138-50c3889fccb1?q=80&w=720&auto=format&fit=crop",
+            "title": "Master's Student",
+            "links": {
+              "github": "#",
+              "googleScholar": "#",
+              "x": "#",
+              "facebook": "#"
+            },
+            "email": "xxx@example.com"
+          },
+          {
+            "name": "Yanning ZHANG",
+            "alias": "张晏宁",
+            "coverSrc": "https://images.unsplash.com/photo-1517352088629-ef1efffaadb9?q=80&w=720&auto=format&fit=crop",
+            "title": "Master's Student",
+            "links": {
+              "github": "#",
+              "googleScholar": "#",
+              "x": "#",
+              "facebook": "#"
+            },
+            "email": "xxx@example.com"
+          },
+          {
+            "name": "Xinbao QIAO",
+            "alias": "乔鑫宝",
+            "coverSrc": "https://images.unsplash.com/photo-1625053120942-13c058603c18?q=80&w=720&auto=format&fit=crop",
+            "title": "Master's Student",
+            "links": {
+              "github": "#",
+              "googleScholar": "#",
+              "x": "#",
+              "facebook": "#"
+            },
+            "email": "xxx@example.com"
+          }
+        ]
+      },
+      {
+        "label": "2023 Cohort",
+        "people": [
+          {
+            "name": "Guozheng HE",
+            "alias": "何国政",
+            "coverSrc": "https://images.unsplash.com/photo-1541577141970-eebc83ebe30e?q=80&w=720&auto=format&fit=crop",
+            "title": "Master's Student",
+            "links": {
+              "github": "#",
+              "googleScholar": "#",
+              "x": "#",
+              "facebook": "#"
+            },
+            "email": "xxx@example.com"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "Administrative Affairs",
+    "people": [
+      {
+        "name": "Ruiying LI",
+        "alias": "李瑞颖",
+        "coverSrc": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=720&auto=format&fit=crop",
+        "title": "Administrative Assistant",
+        "desc": "(since 2021)",
+        "links": {
+          "github": "#",
+          "googleScholar": "#",
+          "x": "#",
+          "facebook": "#"
+        },
+        "email": "xxx@example.com"
+      }
+    ]
+  }
+]

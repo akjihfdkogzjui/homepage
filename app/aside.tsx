@@ -1,13 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BuildingOfficeIcon, EnvelopeIcon, ClockIcon, MapPinIcon, AcademicCapIcon } from "@heroicons/react/24/outline";
-import { PaperAirplaneIcon } from "@heroicons/react/24/solid";
+import { BuildingOfficeIcon, EnvelopeIcon, ClockIcon, MapPinIcon } from "@heroicons/react/24/outline";
 
-import { CopyButton } from "@cp/button.client";
 import LocalTime from "@cp/localTime.client";
 
 import profileData from "@constant/profile.json";
 import linksData from "@constant/links.json";
+import InlineEmail from "@/src/components/inline-email.client";
 
 
 const aside = (
@@ -45,13 +44,8 @@ const aside = (
           <EnvelopeIcon aria-hidden="true" title="E-mail" className="inline-block select-none w-4 h-4 opacity-80" />
         </dt>
         <dd className="space-x-4">
-          <span>E-mail</span>
-          <div className="flex flex-row items-center justify-center space-x-1">
-            <Link href={`mailto:${linksData.contact.email}`} target="_blank" aria-label="Edit-message" className="flex-none text-white bg-gray-600/40 hover:bg-blue-600/40 focus:bg-blue-600/40 w-5 h-5 rounded flex flex-row items-center justify-center">
-              <PaperAirplaneIcon aria-label="Edit-message" title="Edit message" className="inline-block select-none w-4 h-4" />
-            </Link>
-            <CopyButton className="flex-none text-white bg-gray-600/40 hover:bg-blue-600/40 focus:bg-blue-600/40 w-5 h-5 rounded flex flex-row items-center justify-center" text={profileData.email} />
-          </div>
+          <InlineEmail value={profileData.email} />
+          <small className="hidden landscape:inline-block italic text-xs text-gray-400">(Replace [at] with @)</small>
         </dd>
         {/* <dt>
           <svg aria-label="GitHub" className="inline-block select-none w-4 h-4 opacity-80" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -62,7 +56,15 @@ const aside = (
           <Link href={linksData.external.GitHub} target="_blank" className="hover:underline">GitHub</Link>
         </dd> */}
         <dt>
-          <AcademicCapIcon aria-label="Google Scholar" title="Google Scholar" className="inline-block select-none w-4 h-4 opacity-80" />
+          <Image
+            src="https://scholar.google.com/favicon.ico"
+            alt="Google Scholar"
+            width={19}
+            height={19}
+            className="inline-block select-none w-4 h-4 opacity-80"
+            draggable="false"
+            title="Google Scholar"
+          />
         </dt>
         <dd>
           <Link href={linksData.external.google_scholar} target="_blank" className="hover:underline">Google Scholar</Link>

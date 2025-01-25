@@ -2,33 +2,10 @@ import { PageTitle } from "../../src/components/layout-body";
 
 <PageTitle>Nexus Lab</PageTitle>
 
-## Members
 
-### Postdoctoral Researchers
+import membersInfo from "@constant/nexus.json";
+import Team from "@cp/team";
 
-* 曹圣彬 (2021 - present) (City U. Hong Kong, Co-Training Advisor: Prof. 杨 浩)
+<Team label="Researchers and Staffs" members={membersInfo} categoryLabelAs={["h2", "h3", "h4"]} emailReplacer={{ "example.com": "e" }} />
 
-
-
-### Doctoral Students
-
-* 周梦秋 (2022 - present)
-
-* 王启元 (2023 - present)
-
-
-### Master's Students
-
-* 金吕栋 (2022 - present)
-
-* 张晏宁 (2022 - present)
-
-* 乔鑫宝 (2022 - present)
-
-* 何国政 (2023 - present)
-
-
-### Administrative Assistants
-
-* 李瑞颖 (2021 - present)
-
+<pre className="italic text-gray-600 text-sm">※ Replace ` at e` with `@example.com`.</pre>

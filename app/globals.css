@@ -72,6 +72,72 @@ li p {
   }
 }
 
+.with-arrow::before {
+  content: "";
+  display: block;
+  user-select: none;
+  pointer-events: none;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background-color: inherit;
+  border: inherit;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+}
+
+.with-arrow::after {
+  content: "";
+  display: block;
+  user-select: none;
+  pointer-events: none;
+  transform: translate(-50%, -98%);
+  background-color: inherit;
+  border: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 9px;
+  height: 6px;
+}
+
+.blur-right {
+  position: absolute;
+  inset: 0;
+  user-select: none;
+  pointer-events: none;
+  background-image: linear-gradient(to right, transparent 94%, var(--background));
+  background-size: 100% 100%;
+  transform: translateX(1%);
+}
+
+.blur-right::before {
+  content: "";
+  display: block;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to right, transparent 33%, var(--background));
+  background-size: 100% 100%;
+  transform: translateX(1%);
+  opacity: 0.3;
+}
+
+.blur-right::after {
+  content: "";
+  display: block;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to right, transparent 85%, var(--background) 96%, var(--background));
+  background-size: 100% 100%;
+  transform: translateX(1%);
+  opacity: 0.6;
+}
+
 
 @layer utilities {
   @keyframes slide-in-left {

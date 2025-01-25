@@ -18,7 +18,7 @@ const standardMono = Geist_Mono({
 });
 
 const serif = Zilla_Slab({
-  weight: ["400", "600"],
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
