@@ -14,6 +14,8 @@ interface IInlineEmailProps {
   replacer?: Record<string, string>;
 }
 
+let clearer: (() => void) | null = null;
+
 const InlineEmail: FC<IInlineEmailProps> = ({ value, replacer }) => {
   const emailText = useMemo(() => {
     let email = value;
@@ -42,7 +44,7 @@ const InlineEmail: FC<IInlineEmailProps> = ({ value, replacer }) => {
     };
   }, []);
 
-  const textRef = useRef<HTMLSpanElement>(null);
+  const textRef = useRef<HTMLParagraphElement>(null);
   const boxRef = useRef<HTMLDivElement>(null);
 
   const [pos, setPos] = useState<null | [number, number]>(null);
@@ -64,7 +66,7 @@ const InlineEmail: FC<IInlineEmailProps> = ({ value, replacer }) => {
   useEffect(() => {
     if (shouldToolboxDisplay) {
       const cb = (e: MouseEvent | Event) => {
-        if (typeof (e as MouseEvent).x === "number" && e.target && e.target instanceof HTMLElement) {
+        if (e.type === 'mousedown' && e.target && e.target instanceof HTMLElement) {
           for (let index = 0, el = e.target; index < 5 && el.parentElement; index += 1, el = el.parentElement) {
             if (el === textRef.current || el === boxRef.current) {
               return;
@@ -130,18 +132,34 @@ const InlineEmail: FC<IInlineEmailProps> = ({ value, replacer }) => {
 
   const [left, right] = value.split("@");
 
+  useEffect(() => {
+    if (shouldToolboxDisplay) {
+      clearer?.();
+      clearer = () => setPos(null);
+      return () => {
+        clearer = null;
+      };
+    }
+  }, [shouldToolboxDisplay]);
+
+  const { l, m, r } = useMemo(() => {
+    return (/^(?<l>.*)(?<m>((\[at\])|( at )))(?<r>.*)$/.exec(emailText)?.groups ?? { l: emailText, m: '', r: '' }) as { l: string; m: string; r: string };
+  }, [emailText]);
+
   return (
     <>
-      <span
-        className="underline inline"
+      <p
+        className="inline select-none"
         onClick={handleClickText}
         ref={textRef}
         onMouseOver={handleMouseOverText}
         onMouseOut={handleMouseOutText}
       >
-        {emailText}
-        {emailText.includes(" at ") ? <sup><small>※</small></sup> : null}
-      </span>
+        <span className="underline">{l}</span>
+        {m !== '' ? <span className="opacity-75" >{m}</span> : null}
+        {r !== '' ? <span className="opacity-90">{r}</span> : null}
+        {m !== '' ? <sup><small>※</small></sup> : null}
+      </p>
       {mounted && Boolean(portalContainerRef.current) && createPortal((
         <div
           className={`with-arrow ${shouldToolboxDisplay ? 'flex' : 'hidden'} items-center justify-center space-x-1 fixed z-10 hover:z-50 px-4 py-2 bg-background text-foreground/80 backdrop-blur-3xl shadow-md rounded border-dashed border border-foreground/40 -translate-y-full -translate-x-1/2`}
@@ -175,7 +193,7 @@ const InlineEmail: FC<IInlineEmailProps> = ({ value, replacer }) => {
             aria-label="Edit message"
             className="flex-none text-white bg-blue-600/50 hover:bg-blue-600/60 focus:bg-blue-600/60 w-5 h-5 rounded flex flex-row items-center justify-center"
           >
-            <PaperAirplaneIcon aria-label="Edit message" title="Edit message" className="inline-block select-none w-4 h-4" />
+            <PaperAirplaneIcon aria-label="Edit message" title="Edit message" className="inline-block select-none pointer-events-none w-4 h-4" />
           </Link>
         </div>
       ), portalContainerRef.current!)}

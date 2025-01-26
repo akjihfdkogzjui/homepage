@@ -40,7 +40,6 @@ const TeamMember: FC<ITeamMember & { emailReplacer?: Record<string, string> }> =
           width={360}
           height={360}
         />
-        <div className="hidden portrait:block absolute inset-0 pointer-events-none blur-right" />
       </div>
       <div className="px-2 portrait:pl-3 portrait:flex portrait:flex-col py-4 landscape:px-4 landscape:py-6 xl:py-8 space-y-2">
         <div className="space-y-1.5 portrait:grow-[9]">

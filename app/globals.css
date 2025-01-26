@@ -102,42 +102,6 @@ li p {
   height: 6px;
 }
 
-.blur-right {
-  position: absolute;
-  inset: 0;
-  user-select: none;
-  pointer-events: none;
-  background-image: linear-gradient(to right, transparent 94%, var(--background));
-  background-size: 100% 100%;
-  transform: translateX(1%);
-}
-
-.blur-right::before {
-  content: "";
-  display: block;
-  user-select: none;
-  pointer-events: none;
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(to right, transparent 33%, var(--background));
-  background-size: 100% 100%;
-  transform: translateX(1%);
-  opacity: 0.3;
-}
-
-.blur-right::after {
-  content: "";
-  display: block;
-  user-select: none;
-  pointer-events: none;
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(to right, transparent 85%, var(--background) 96%, var(--background));
-  background-size: 100% 100%;
-  transform: translateX(1%);
-  opacity: 0.6;
-}
-
 
 @layer utilities {
   @keyframes slide-in-left {

@@ -6,6 +6,12 @@ import { PageTitle } from "@cp/layout-body";
 import membersInfo from "@constant/nexus.json";
 import Team from "@cp/team";
 
-<Team label="Researchers and Staffs" members={membersInfo} categoryLabelAs={["h2", "h3", "h4"]} emailReplacer={{ "example.com": "e" }} />
+<Team label="Researchers and Staffs" members={membersInfo} categoryLabelAs={["h2", "h3", "h4"]} emailReplacer={{ "example.com": "e", "intl.zju.edu.cn": "intl" }} />
 
-<pre className="italic text-gray-600 text-sm">※ Replace ` at e` with `@example.com`.</pre>
+<div className="flex items-baseline">
+  <span className="flex-none text-sm px-2">※</span>
+  <div className="flex-1">
+    <pre className="italic text-gray-600 text-sm py-1">Replace ` at intl` with `@intl.zju.edu.cn`.</pre>
+    <pre className="italic text-gray-600 text-sm py-1">Replace ` at e` with `@example.com`.</pre>
+  </div>
+</div>

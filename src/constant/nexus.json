@@ -1,5 +1,23 @@
 [
   {
+    "label": "Professors",
+    "people": [
+      {
+        "name": "Meng ZHANG",
+        "alias": "张萌",
+        "coverSrc": "/people/MengZhang.jpg",
+        "title": "Ph.D.",
+        "links": {
+          "github": "#",
+          "googleScholar": "https://scholar.google.com/citations?user=a1wBDJsAAAAJ&hl=en",
+          "x": "#",
+          "facebook": "#"
+        },
+        "email": "mengzhang@intl.zju.edu.cn"
+      }
+    ]
+  },
+  {
     "label": "Postdoctoral Researchers",
     "people": [
       {

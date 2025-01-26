@@ -86,7 +86,7 @@ export const CopyButton: FC<{ text: string } & Omit<ComponentProps<typeof Button
 
   return (
     <Button {...props} className={cn} onTrigger={handler} aria-label="Copy content to clipboard" title="Copy content to clipboard">
-      <Icon aria-hidden="true" className="inline-block select-none w-4 h-4" />
+      <Icon aria-hidden="true" className="inline-block select-none pointer-events-none w-4 h-4" />
     </Button>
   );
 };
