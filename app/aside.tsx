@@ -13,7 +13,7 @@ const aside = (
   <div className="bg-white px-14 xl:px-4 py-8 xl:py-16 space-y-8">
     <div className="flex flex-row xl:flex-col space-x-6 xl:space-x-0 xl:space-y-4">
       <div className="flex-none">
-        <Image alt={profileData.fullName} src="/MengZhang-rect.jpg" width="512" height="512" className="max-w-36 portrait:max-w-[30vw] mx-auto rounded-full overflow-hidden" draggable="false" />
+        <Image alt={profileData.fullName} src="/MengZhang-rect.jpg" width="512" height="512" priority={true} className="max-w-36 portrait:max-w-[30vw] mx-auto rounded-full overflow-hidden" draggable="false" />
       </div>
       <div className="flex-1 text-start xl:text-center flex flex-col items-start xl:items-center justify-center">
         <p className="my-1 text-base xl:text-sm leading-8 xl:leading-5 text-gray-950"><b>{profileData.fullName}</b></p>
@@ -45,7 +45,7 @@ const aside = (
         </dt>
         <dd className="space-x-4">
           <InlineEmail value={profileData.email} />
-          <small className="hidden landscape:inline-block landscape:xl:hidden italic text-xs text-gray-400">(Replace [at] with @)</small>
+          <small className="hidden landscape:inline-block landscape:xl:hidden italic text-xs text-gray-600">(Replace [at] with @)</small>
         </dd>
         {/* <dt>
           <svg aria-label="GitHub" className="inline-block select-none w-4 h-4 opacity-80" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">

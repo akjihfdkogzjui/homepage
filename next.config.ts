@@ -1,4 +1,5 @@
 import { spawn } from "child_process";
+import { readFileSync } from "fs";
 
 import type { NextConfig } from "next";
 import NextMDX from "@next/mdx";
@@ -78,5 +79,14 @@ const nextConfig: NextConfig = {
   },
 };
 
+if (process.env.VERCEL_DEV === 'true') {
+  try {
+    const vercelProj = JSON.parse(readFileSync("./.vercel/project.json", "utf-8"));
+    process.env.NEXT_PUBLIC_VERCEL_TOOLBAR_SERVER = process.env.DEPLOY_DOMAIN;
+    process.env.NEXT_PUBLIC_VERCEL_TOOLBAR_OWNER_ID = vercelProj.orgId;
+    process.env.NEXT_PUBLIC_VERCEL_TOOLBAR_PROJECT_ID = vercelProj.projectId;
+  } catch {}
+}
 
-export default withMDX(nextConfig);
+
+export default withMDX((nextConfig));

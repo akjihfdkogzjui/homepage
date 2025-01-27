@@ -1,4 +1,4 @@
-import { type FC, type PropsWithChildren } from "react";
+import type { FC, PropsWithChildren } from "react";
 import type { Metadata, Viewport } from "next";
 import { headers } from "next/headers";
 import { Analytics } from "@vercel/analytics/next";
@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/next";
 import NavBar from "@cp/navBar";
 import LayoutBody from "@cp/layout-body";
 import Footer from "@cp/footer";
+import DevTools from "@cp/dev-tools.client";
 import BackToTopButton from "@cp/back-to-top-button";
 import siteData from "@constant/site.json";
 import profileData from "@constant/profile.json";
@@ -78,9 +79,9 @@ export const viewport: Viewport = {
 
 
 const Layout: FC<PropsWithChildren> = ({ children }) => (
-  <html lang="en">
+  <html lang="en" className="scroll-style-none">
     <body
-      className={`${font.notoSans.className} ${font.standardSans.variable} ${font.standardMono.variable} antialiased w-screen min-h-screen overflow-x-hidden overflow-y-scroll bg-background text-foreground`}
+      className={`${font.notoSans.className} ${font.standardSans.variable} ${font.standardMono.variable} antialiased w-screen min-h-screen overflow-x-hidden overflow-y-scroll bg-background text-foreground scroll-style-none`}
       style={{
         // @ts-expect-error css variables
         '--background': globalTheme.background,
@@ -89,12 +90,13 @@ const Layout: FC<PropsWithChildren> = ({ children }) => (
       id="body"
     >
       <NavBar homeLabel={`${profileData.fullName}, ${profileData.title}`} />
-      <div className="relative w-full h-full mt-16 mb-0 overflow-hidden scroll-style-none py-0">
+      <div className="relative w-full h-full mt-16 mb-0 overflow-hidden py-0">
         <div className="w-full overflow-x-hidden" id="main">
           <LayoutBody>
             {children}
           </LayoutBody>
         </div>
+        <DevTools />
         <Footer />
       </div>
       <BackToTopButton />

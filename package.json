@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "dev:vercel": "cross-env NODE_ENV=development DEPLOY_DOMAIN=\"http://localhost:3000/\" DEPLOY_MODE=\"private\" VERCEL_DEV=\"true\" vercel dev",
     "vercel": "vercel pull && cross-env NODE_ENV=preview DEPLOY_DOMAIN=\"https://mengzhang-hp.vercel.app/\" DEPLOY_MODE=\"private\" vercel build --target=preview && vercel deploy --prebuilt"
   },
   "dependencies": {
@@ -24,6 +25,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vercel/toolbar": "^0.1.30",
     "cross-env": "^7.0.3",
     "eslint": "^9",
     "eslint-config-next": "15.1.2",
