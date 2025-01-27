@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "vercel": "vercel pull && cross-env NODE_ENV=preview DEPLOY_DOMAIN=\"https://mengzhang-hp.vercel.app/\" DEPLOY_MODE=\"private\" vercel build --target=preview && vercel deploy --prebuilt"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -23,10 +24,19 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cross-env": "^7.0.3",
     "eslint": "^9",
     "eslint-config-next": "15.1.2",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
+  },
+  "peerDependencies": {
+    "vercel": "^39.3.0"
+  },
+  "peerDependenciesMeta": {
+    "vercel": {
+      "optional": true
+    }
   }
 }
