@@ -12,7 +12,7 @@ const Footer: FC = () => {
     <>
       <hr />
       <footer className="flex flex-col items-center bg-gray-50/40 pb-4 landscape:pb-8">
-        <div className="flex-none w-full my-7 portrait:my-6 mx-auto px-8 pb-3 flex flex-row flex-wrap items-start justify-center">
+        <div className="flex-none w-full my-7 portrait:my-6 mx-auto px-6 pb-3 flex flex-row flex-wrap items-start justify-center">
           <dl className={`flex-none mx-4 my-6 portrait:my-2 flex flex-col items-center space-y-4 portrait:space-y-1 ${font.serif.className}`}>
             <dt className={`${font.notoSans.className} text-lg py-1 portrait:text-base text-gray-900 font-semibold`}>External Links</dt>
             <dd className="flex flex-col items-center space-y-1">

@@ -1,43 +1,13 @@
 [
   {
-    "label": "Professors",
+    "label": "Lab Leader",
     "people": [
       {
         "name": "Meng ZHANG",
         "alias": "张萌",
-        "coverSrc": "/people/MengZhang.jpg",
+        "coverSrc": "/images/people/MengZhang.jpg",
         "title": "Ph.D.",
-        "links": {
-          "github": "#",
-          "googleScholar": "https://scholar.google.com/citations?user=a1wBDJsAAAAJ&hl=en",
-          "x": "#",
-          "facebook": "#"
-        },
         "email": "mengzhang@intl.zju.edu.cn"
-      }
-    ]
-  },
-  {
-    "label": "Postdoctoral Researchers",
-    "people": [
-      {
-        "label": "2021 Cohort",
-        "people": [
-          {
-            "name": "Shengbin CAO",
-            "alias": "曹圣彬",
-            "coverSrc": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=720&auto=format&fit=crop",
-            "title": "Postdoctoral Fellow *",
-            "desc": "* Ph.D. in City U. Hong Kong, Co-Training Advisor: Prof. 杨 浩",
-            "links": {
-              "github": "#",
-              "googleScholar": "#",
-              "x": "#",
-              "facebook": "#"
-            },
-            "email": "xxx@example.com"
-          }
-        ]
       }
     ]
   },
@@ -45,40 +15,33 @@
     "label": "Doctoral Students",
     "people": [
       {
-        "label": "2022 Cohort",
-        "people": [
-          {
-            "name": "Mengqiu ZHOU",
-            "alias": "周梦秋",
-            "coverSrc": "https://images.unsplash.com/photo-1530268729831-4b0b9e170218?q=80&w=720&auto=format&fit=crop",
-            "title": "Ph.D. Student",
-            "links": {
-              "github": "#",
-              "googleScholar": "#",
-              "x": "#",
-              "facebook": "#"
-            },
-            "email": "xxx@example.com"
-          }
-        ]
+        "name": "Qiyuan WANG",
+        "alias": "王启元",
+        "coverSrc": "/images/people/Q_Wang.jpg",
+        "email": "qy_wang@zju.edu.cn"
       },
       {
-        "label": "2023 Cohort",
-        "people": [
-          {
-            "name": "Qiyuan WANG",
-            "alias": "王启元",
-            "coverSrc": "https://images.unsplash.com/photo-1521119989659-a83eee488004?q=80&w=720&auto=format&fit=crop",
-            "title": "Ph.D. Student",
-            "links": {
-              "github": "#",
-              "googleScholar": "#",
-              "x": "#",
-              "facebook": "#"
-            },
-            "email": "xxx@example.com"
-          }
-        ]
+        "name": "Haoyang HUANG",
+        "alias": "黄皓扬",
+        "coverSrc": "/images/people/H_Huang.jpg"
+      },
+      {
+        "name": "Mengqiu ZHOU",
+        "alias": "周梦秋",
+        "coverSrc": "/images/people/M_Zhou.jpg",
+        "email": "mengqiuzhou@zju.edu.cn"
+      },
+      {
+        "name": "Lvdong JIN",
+        "alias": "金吕栋",
+        "coverSrc": "/images/people/L_Jin.jpg",
+        "email": "3180101183@zju.edu.cn"
+      },
+      {
+        "name": "Yanning ZHANG",
+        "alias": "张晏宁",
+        "coverSrc": "/images/people/Y_Zhang.jpg",
+        "email": "yanning.22@intl.zju.edu.cn"
       }
     ]
   },
@@ -86,85 +49,55 @@
     "label": "Master's Students",
     "people": [
       {
-        "label": "2022 Cohort",
-        "people": [
-          {
-            "name": "Lvdong JIN",
-            "alias": "金吕栋",
-            "coverSrc": "https://images.unsplash.com/photo-1492447166138-50c3889fccb1?q=80&w=720&auto=format&fit=crop",
-            "title": "Master's Student",
-            "links": {
-              "github": "#",
-              "googleScholar": "#",
-              "x": "#",
-              "facebook": "#"
-            },
-            "email": "xxx@example.com"
-          },
-          {
-            "name": "Yanning ZHANG",
-            "alias": "张晏宁",
-            "coverSrc": "https://images.unsplash.com/photo-1517352088629-ef1efffaadb9?q=80&w=720&auto=format&fit=crop",
-            "title": "Master's Student",
-            "links": {
-              "github": "#",
-              "googleScholar": "#",
-              "x": "#",
-              "facebook": "#"
-            },
-            "email": "xxx@example.com"
-          },
-          {
-            "name": "Xinbao QIAO",
-            "alias": "乔鑫宝",
-            "coverSrc": "https://images.unsplash.com/photo-1625053120942-13c058603c18?q=80&w=720&auto=format&fit=crop",
-            "title": "Master's Student",
-            "links": {
-              "github": "#",
-              "googleScholar": "#",
-              "x": "#",
-              "facebook": "#"
-            },
-            "email": "xxx@example.com"
-          }
-        ]
+        "name": "Kang TAN",
+        "alias": "谭康",
+        "coverSrc": "/images/people/K_Tan.jpg",
+        "email": "kang.24@intl.zju.edu.cn"
       },
       {
-        "label": "2023 Cohort",
-        "people": [
-          {
-            "name": "Guozheng HE",
-            "alias": "何国政",
-            "coverSrc": "https://images.unsplash.com/photo-1541577141970-eebc83ebe30e?q=80&w=720&auto=format&fit=crop",
-            "title": "Master's Student",
-            "links": {
-              "github": "#",
-              "googleScholar": "#",
-              "x": "#",
-              "facebook": "#"
-            },
-            "email": "xxx@example.com"
-          }
-        ]
+        "name": "Yanhai LI",
+        "alias": "李燕寒",
+        "coverSrc": "/images/people/Y_Li.jpg",
+        "email": "yanhan.24@intl.zju.edu.cn"
+      },
+      {
+        "name": "Chengrui WU",
+        "alias": "吴铖瑞",
+        "coverSrc": "/images/people/C_Wu.jpg",
+        "email": "chengrui.24@intl.zju.edu.cn"
+      },
+      {
+        "name": "Xinbao QIAO",
+        "alias": "乔鑫宝",
+        "coverSrc": "/images/people/X_Qiao.jpg",
+        "email": "xinbaoqiao@zju.edu.cn"
+      },
+      {
+        "name": "Yikai FU",
+        "alias": "付奕凯",
+        "coverSrc": "/images/people/Y_Fu.jpg",
+        "email": "yikai1.24@intl.zju.edu.cn"
+      },
+      {
+        "name": "Jiahe WANG",
+        "alias": "汪嘉禾",
+        "coverSrc": "/images/people/J_Wang.jpg"
       }
     ]
   },
   {
-    "label": "Administrative Affairs",
+    "label": "Research Assistants",
     "people": [
       {
-        "name": "Ruiying LI",
-        "alias": "李瑞颖",
-        "coverSrc": "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=720&auto=format&fit=crop",
-        "title": "Administrative Assistant",
-        "desc": "(since 2021)",
-        "links": {
-          "github": "#",
-          "googleScholar": "#",
-          "x": "#",
-          "facebook": "#"
-        },
-        "email": "xxx@example.com"
+        "name": "Shan LIU",
+        "alias": "刘珊",
+        "coverSrc": "/images/people/S_Liu.jpg",
+        "email": "shanliu@intl.zju.edu.cn"
+      },
+      {
+        "name": "Xunhao JIANG",
+        "alias": "蒋勋灏",
+        "coverSrc": "/images/people/X_Jiang.jpg"
       }
     ]
   }

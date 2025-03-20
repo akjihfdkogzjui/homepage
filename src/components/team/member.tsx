@@ -12,7 +12,7 @@ export interface ITeamMember {
   name: string;
   alias?: string;
   coverSrc: string;
-  title: string;
+  title?: string;
   desc?: string;
   links?: Partial<{
     github: string;
@@ -31,7 +31,7 @@ const TeamMember: FC<ITeamMember & { emailReplacer?: Record<string, string> }> =
 
   return (
     <div className={`${font.notoSans.className} portrait:flex portrait:items-stretch portrait:text-left landscape:text-center bg-white shadow-sm shadow-foreground/10`}>
-      <div className="relative landscape:w-full portrait:w-[30%] portrait:h-full landscape:h-[334px] xl:!h-[calc(8vw+232px)] portrait:flex-none portrait:items-stretch portrait:justify-stretch">
+      <div className="relative landscape:w-full portrait:w-[30%] portrait:h-full portrait:hover:w-full portrait:hover:mr-[-70%] portrait:transition-all portrait:z-10 landscape:h-[334px] xl:!h-[calc(8vw+232px)] portrait:flex-none portrait:items-stretch portrait:justify-stretch">
         <Image
           alt={name}
           className="w-full h-full portrait:h-60 flex-1 select-none object-cover"
@@ -51,7 +51,7 @@ const TeamMember: FC<ITeamMember & { emailReplacer?: Record<string, string> }> =
             {alias && <small className="text-sm font-normal text-gray-600 leading-6 mx-2 my-1 flex-none text-ellipsis overflow-hidden">({alias})</small>}
           </div>
           <div className="space-y-1.5">
-            <p className="text-gray-500 uppercase text-sm text-ellipsis overflow-hidden">{title}</p>
+            {title && <p className="text-gray-500 uppercase text-sm text-ellipsis overflow-hidden">{title}</p>}
             {desc && (
               <p className={`${font.serif.className} pb-1 leading-4`}>
                 <small className="text-sm font-normal text-gray-700">

@@ -34,7 +34,7 @@ const LayoutBody: FC<PropsWithChildren> = ({ children }) => {
             {asideStart}
           </div>
         </aside>
-        <main className="flex-none px-14 mb-32">
+        <main className="flex-none px-6 mb-32">
           <article className="mx-auto mt-8 xl:mt-0 landscape:w-[800px] xl:!w-[calc(377.6px+33vw)] xl:pt-8">
             {title ? (
               <>

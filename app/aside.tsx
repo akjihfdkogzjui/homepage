@@ -10,7 +10,7 @@ import InlineEmail from "@/src/components/inline-email.client";
 
 
 const aside = (
-  <div className="bg-white px-14 xl:px-4 py-8 xl:py-16 space-y-8">
+  <div className="bg-white px-6 xl:px-4 py-8 xl:py-16 space-y-8">
     <div className="flex flex-row xl:flex-col space-x-6 xl:space-x-0 xl:space-y-4">
       <div className="flex-none">
         <Image alt={profileData.fullName} src="/MengZhang-rect.jpg" width="512" height="512" priority={true} className="max-w-36 portrait:max-w-[30vw] mx-auto rounded-full overflow-hidden" draggable="false" />
