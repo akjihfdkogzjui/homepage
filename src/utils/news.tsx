@@ -37,7 +37,7 @@ const extractTextFromParagraphs = (el: ReactElement, insideP: boolean = false): 
   return result;
 };
 
-export const extractContent = async (raw: string): Promise<{ title: string; cover?: string; content: string }> => {
+export const extractContent = async (raw: string): Promise<{ title: string; cover?: string; date?: string; content: string }> => {
   const { content, data } = matter(raw);
   
   const code = String(
@@ -50,6 +50,7 @@ export const extractContent = async (raw: string): Promise<{ title: string; cove
   return {
     title: data.title ?? "(Untitled)",
     cover: data.cover as string | undefined,
+    date: data.date as string | undefined,
     content: extractTextFromParagraphs(<MDXContent />),
   };
 };

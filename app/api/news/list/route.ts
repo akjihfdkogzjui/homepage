@@ -37,12 +37,21 @@ export const GET = async (req: NextRequest): Promise<Response> => {
   const pageIndex = Math.max(1, Math.min(count, _pi));
   const page = md.slice((pageIndex - 1) * pageSize, pageIndex * pageSize);
   const list = await Promise.all(page.map<Promise<News>>(async f => {
-    const { title, cover, content } = await extractContent(await readFile(f.filename, { encoding: "utf-8" }));
+    const { title, cover, date, content } = await extractContent(await readFile(f.filename, { encoding: "utf-8" }));
+    let ctime = f.stat.ctime.valueOf();
+    let atime = f.stat.atime.valueOf();
+    if (date) {
+      try {
+        const d = new Date(date);
+        ctime = d.valueOf();
+        atime = d.valueOf();
+      } finally {}
+    }
     return {
       id: f.id,
       title,
-      ctime: f.stat.ctime.valueOf(),
-      atime: f.stat.atime.valueOf(),
+      ctime,
+      atime,
       cover,
       preview: content.slice(0, PREVIEW_LEN),
     };

@@ -31,6 +31,9 @@ function recurse(dir, cb) {
   data.name = data.name.slice(0, 1).toUpperCase() + data.name.slice(1);
   const ls = readdirSync(dir);
   for (const name of ls) {
+    if (name === "[id]") {
+      continue;
+    }
     const fn = path.resolve(dir, name);
     const stat = statSync(fn);
     if (stat.isDirectory()) {
@@ -161,6 +164,27 @@ Sitemap: ${baseUrl}/sitemap.xml
   writeFileSync(robotsTxtFileName, content, 'utf-8');
 }
 
+const NEWS_DIR = path.join(process.cwd(), "articles", "news");
+
+/** @returns {{
+    id: string;
+    filename: string;
+    stat: import("fs").Stats;
+}[]} */
+function getAllNews() {
+  const raw = readdirSync(NEWS_DIR);
+  const files = raw.map(name => {
+    const filename = path.join(NEWS_DIR, name);
+    return {
+      id: name.replace(/\.md$/, ""),
+      filename,
+      stat: statSync(filename),
+    };
+  });
+  const md = files.filter(f => f.stat.isFile() && f.filename.endsWith(".md")).toSorted((a, b) => b.stat.atime.valueOf() - a.stat.atime.valueOf());
+  return md;
+};
+
 function main() {
   /** @type {import('../src/utils/site').RouteNode} */
   let routeTree = {};
@@ -168,6 +192,33 @@ function main() {
   recurse(appDir, item => {
     routeTree = item;
   });
+  const newsParent = routeTree.children?.find(w => w.id === "/news");
+  if (newsParent) {
+    newsParent.children = [];
+    const newsList = getAllNews();
+    for (const news of newsList) {
+      const lines = readFileSync(news.filename, { encoding: "utf-8" }).split(/[\r\n]+/).filter(Boolean).slice(0, 40);
+      let title = "(Untitled News)";
+      for (const line of lines) {
+        const matchForFm = /^title: (?<title>.+)\s*$/.exec(line);
+        const matchForH1 = /^# (?<title>.+)\s*$/.exec(line);
+        const match = matchForFm ?? matchForH1;
+        if (match) {
+          title = match.groups.title;
+          break;
+        }
+      }
+      const data = {
+        id: `/news/${news.id}`,
+        name: `[News] ${title}`,
+        description: title,
+        mtime: news.stat.mtime.valueOf(),
+        changeFreq: "weekly",
+        priority: 0.5,
+      };
+      newsParent.children.push(data);
+    }
+  }
 
   if (!existsSync(outputDir)) {
     mkdirSync(outputDir, { recursive: true });
