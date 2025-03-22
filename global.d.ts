@@ -3,7 +3,7 @@ declare global {
   namespace NodeJS {
 
     interface ProcessEnv {
-      readonly DEPLOY_DOMAIN: string;
+      readonly NEXT_PUBLIC_DEPLOY_DOMAIN: string;
       readonly DEPLOY_MODE: "private" | "public";
       readonly VERCEL_DEV?: undefined | `${boolean}`;
       NEXT_PUBLIC_VERCEL_TOOLBAR_SERVER?: string;

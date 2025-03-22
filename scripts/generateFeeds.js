@@ -175,7 +175,7 @@ function main() {
   writeFileSync(jsonFileName, JSON.stringify(routeTree, undefined, 2), { encoding: 'utf-8' });
 
   const posts = node2List(routeTree);
-  const baseUrl = process.env.DEPLOY_DOMAIN.replace(/\/$/, '');
+  const baseUrl = process.env.NEXT_PUBLIC_DEPLOY_DOMAIN.replace(/\/$/, '');
 
   generateRSS(baseUrl, posts);
   generateSitemap(baseUrl, posts);
