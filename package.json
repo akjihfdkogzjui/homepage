@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "produce": "cross-env NODE_ENV=production NEXT_PUBLIC_DEPLOY_DOMAIN=\"https://nexus-mengzhang.vercel.app/\" DEPLOY_MODE=\"public\" next build",
     "start": "next start",
     "lint": "next lint",
     "dev:vercel": "cross-env NODE_ENV=development NEXT_PUBLIC_DEPLOY_DOMAIN=\"http://localhost:3000/\" DEPLOY_MODE=\"private\" VERCEL_DEV=\"true\" vercel dev",
