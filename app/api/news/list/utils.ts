@@ -19,6 +19,8 @@ export const getAllNews = async (): Promise<{
       stat: await stat(filename),
     };
   }));
-  const md = files.filter(f => f.stat.isFile() && f.filename.endsWith(".md")).toSorted((a, b) => b.stat.atime.valueOf() - a.stat.atime.valueOf());
+  // Sort by date-encoded id (YYYYMMDDNN) descending so newest posts come first.
+  // (File atime is unreliable: a fresh git checkout/deploy resets all timestamps.)
+  const md = files.filter(f => f.stat.isFile() && f.filename.endsWith(".md")).toSorted((a, b) => b.id.localeCompare(a.id));
   return md;
 };
