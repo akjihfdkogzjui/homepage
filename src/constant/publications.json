@@ -1,10 +1,35 @@
 {
   "Journal_Papers": [
     {
+      "authors": "M. Zhou, M. Zhang*, H. H. Yang, and R. Yates",
+      "title": "Timely CPU Scheduling for Computation-intensive Status Updates",
+      "status": "To appear",
+      "journal": "IEEE Transactions on Information Theory (TIT)",
+      "year": 2026
+    },
+    {
+      "authors": "F. Zhao, N. Pappas, M. Zhang, and H. H. Yang",
+      "title": "Age of Information in Random Access Networks with Energy Harvesting",
+      "journal": "IEEE Journal on Selected Areas in Communications (JSAC)",
+      "year": 2025
+    },
+    {
+      "authors": "M. Zhang and D. Vasal",
+      "title": "Large-Scale Mechanism Design for Networks: Superimposability and Dynamic Implementation",
+      "journal": "IEEE Transactions on Mobile Computing (TMC)",
+      "year": 2025
+    },
+    {
+      "authors": "G. Liao, B. Luo, Y. Feng, M. Zhang*, and X. Chen",
+      "title": "Optimal Mechanism Design for Heterogeneous Client Sampling in Federated Learning",
+      "journal": "IEEE Transactions on Mobile Computing (TMC)",
+      "year": 2024
+    },
+    {
       "authors": "M. Zhang, E. Wei, R. Berry, and J. Huang",
       "title": "Age-Dependent Differential Privacy",
-      "status": "To appear",
-      "journal": "IEEE Transactions on Information Theory (TIT)"
+      "journal": "IEEE Transactions on Information Theory (TIT)",
+      "year": 2024
     },
     {
       "authors": "M. Zhang, E. Wei, and R. Berry",
@@ -65,6 +90,36 @@
     }
   ],
   "Conference_Papers": [
+    {
+      "authors": "X. Qiao, M. Zhang*, M. Tang, and E. Wei",
+      "title": "Hessian-Free Online Certified Unlearning",
+      "conference": "International Conference on Learning Representations (ICLR)",
+      "year": 2025
+    },
+    {
+      "authors": "S. Wang, Z. Shen, X. Qiao, T. Zhang, and M. Zhang*",
+      "title": "DynFrs: An Efficient Framework for Machine Unlearning in Random Forest",
+      "conference": "International Conference on Learning Representations (ICLR)",
+      "year": 2025
+    },
+    {
+      "authors": "Q. Wang, R. Xu, S. He, R. Berry, and M. Zhang*",
+      "title": "Unlearning Incentivizes Learning under Privacy Risk",
+      "conference": "ACM Web Conference (WWW)",
+      "year": 2025
+    },
+    {
+      "authors": "M. Tang, L. Jin, M. Zhang*, and H. Wang",
+      "title": "Fractional Deep Reinforcement Learning for Age-Minimal Mobile Edge Computing",
+      "conference": "AAAI Conference on Artificial Intelligence (AAAI)",
+      "year": 2024
+    },
+    {
+      "authors": "M. Zhang, H. H. Yang, A. Arafa, and H. V. Poor",
+      "title": "Age of Information in Mobile Networks: Fundamental Limits and Tradeoffs",
+      "conference": "ACM MobiHoc",
+      "year": 2024
+    },
     {
       "authors": "M. Zhou, M. Zhang*, H. Yang, and R. Yates",
       "title": "Age-minimal CPU Scheduling",
