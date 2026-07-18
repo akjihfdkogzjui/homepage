@@ -67,12 +67,6 @@
         "email": "chengrui.24@intl.zju.edu.cn"
       },
       {
-        "name": "Xinbao QIAO",
-        "alias": "乔鑫宝",
-        "coverSrc": "/images/people/X_Qiao.jpg",
-        "email": "xinbaoqiao@zju.edu.cn"
-      },
-      {
         "name": "Yikai FU",
         "alias": "付奕凯",
         "coverSrc": "/images/people/Y_Fu.jpg",
@@ -93,6 +87,11 @@
         "name": "Runfeng ZHOU",
         "alias": "周润峰",
         "coverSrc": "/images/people/R_Zhou.jpg"
+      },
+      {
+        "name": "Yizhou CHEN",
+        "alias": "陈逸舟",
+        "coverSrc": "/images/people/Y_Chen.jpg"
       }
     ]
   },
@@ -109,6 +108,17 @@
         "name": "Xunhao JIANG",
         "alias": "蒋勋灏",
         "coverSrc": "/images/people/X_Jiang.jpg"
+      }
+    ]
+  },
+  {
+    "label": "Alumni",
+    "people": [
+      {
+        "name": "Xinbao QIAO",
+        "alias": "乔鑫宝",
+        "coverSrc": "/images/people/X_Qiao.jpg",
+        "title": "Ph.D. Student, CUHK"
       }
     ]
   }
