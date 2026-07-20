@@ -1,6 +1,27 @@
 {
   "Journal_Papers": [
     {
+      "authors": "L. Jin, Y. Zhang, Y. Li, S. Wang, H. H. Yang, J. Wu, and M. Zhang*",
+      "title": "MoE²: Optimizing Collaborative Inference for Edge Large Language Models",
+      "status": "To appear",
+      "journal": "IEEE/ACM Transactions on Networking (ToN)",
+      "year": 2026
+    },
+    {
+      "authors": "M. Tang, L. Jin, M. Zhang*, and H. Wang",
+      "title": "Asynchronous Fractional Multi-Agent Deep Reinforcement Learning for Age-Minimal Mobile Edge Computing",
+      "status": "To appear",
+      "journal": "IEEE/ACM Transactions on Networking (ToN)",
+      "year": 2026
+    },
+    {
+      "authors": "J. Zhu, C. Feng, G. Geraci, C. Liu, M. Zhang, and H. H. Yang",
+      "title": "The Meta Distribution of the SINR in Joint Communication and Sensing Networks",
+      "status": "To appear",
+      "journal": "IEEE Transactions on Network Science and Engineering (TNSE)",
+      "year": 2026
+    },
+    {
       "authors": "M. Zhou, M. Zhang*, H. H. Yang, and R. Yates",
       "title": "Timely CPU Scheduling for Computation-intensive Status Updates",
       "status": "To appear",
@@ -30,6 +51,12 @@
       "title": "Age-Dependent Differential Privacy",
       "journal": "IEEE Transactions on Information Theory (TIT)",
       "year": 2024
+    },
+    {
+      "authors": "Z. Yue, H. H. Yang, M. Zhang, and N. Pappas",
+      "title": "Age of Information under Frame Slotted ALOHA-based Status Updating Protocol",
+      "journal": "IEEE Journal on Selected Areas in Communications (JSAC)",
+      "year": 2023
     },
     {
       "authors": "M. Zhang, E. Wei, and R. Berry",
@@ -90,6 +117,12 @@
     }
   ],
   "Conference_Papers": [
+    {
+      "authors": "M. Zhou, L. Yang, V. Y. F. Tan, and M. Zhang",
+      "title": "Age-Optimal Best Arm Identification",
+      "conference": "International Symposium on Modeling and Optimization in Mobile, Ad Hoc, and Wireless Networks (WiOpt)",
+      "year": 2026
+    },
     {
       "authors": "X. Qiao, M. Zhang*, M. Tang, and E. Wei",
       "title": "Hessian-Free Online Certified Unlearning",
