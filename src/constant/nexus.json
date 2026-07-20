@@ -42,6 +42,12 @@
         "alias": "张晏宁",
         "coverSrc": "/images/people/Y_Zhang.jpg",
         "email": "yanning.22@intl.zju.edu.cn"
+      },
+      {
+        "name": "Yikai FU",
+        "alias": "付奕凯",
+        "coverSrc": "/images/people/Y_Fu.jpg",
+        "email": "yikai1.24@intl.zju.edu.cn"
       }
     ]
   },
@@ -67,21 +73,9 @@
         "email": "chengrui.24@intl.zju.edu.cn"
       },
       {
-        "name": "Yikai FU",
-        "alias": "付奕凯",
-        "coverSrc": "/images/people/Y_Fu.jpg",
-        "email": "yikai1.24@intl.zju.edu.cn"
-      },
-      {
         "name": "Jiahe WANG",
         "alias": "汪嘉禾",
         "coverSrc": "/images/people/J_Wang.jpg"
-      },
-      {
-        "name": "Guozheng He",
-        "alias": "何国政",
-        "coverSrc": "/images/people/G_He.jpg",
-        "email": "22371154@zju.edu.cn"
       },
       {
         "name": "Runfeng ZHOU",
@@ -119,6 +113,11 @@
         "alias": "乔鑫宝",
         "coverSrc": "/images/people/X_Qiao.jpg",
         "title": "Ph.D. Student, CUHK"
+      },
+      {
+        "name": "Guozheng He",
+        "alias": "何国政",
+        "coverSrc": "/images/people/G_He.jpg"
       }
     ]
   }
