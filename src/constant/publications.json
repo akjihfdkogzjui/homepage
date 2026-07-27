@@ -3,7 +3,6 @@
     {
       "authors": "L. Jin, Y. Zhang, Y. Li, S. Wang, H. H. Yang, J. Wu, and M. Zhang*",
       "title": "MoE²: Optimizing Collaborative Inference for Edge Large Language Models",
-      "status": "To appear",
       "journal": "IEEE/ACM Transactions on Networking (ToN)",
       "year": 2026
     },
@@ -27,6 +26,36 @@
       "status": "To appear",
       "journal": "IEEE Transactions on Information Theory (TIT)",
       "year": 2026
+    },
+    {
+      "authors": "N. Yang, Y. Liu, S. Chen, M. Zhang, and H. Zhang",
+      "title": "Minimizing Age of Information in Mobile Edge Computing: Nested Index Policy with Preemptive and Non-Preemptive Structure",
+      "journal": "IEEE Transactions on Mobile Computing (TMC)",
+      "year": 2026
+    },
+    {
+      "authors": "J. He, Q. Ma, M. Zhang, and J. Huang",
+      "title": "Optimizing Fresh Data Sampling and Trading",
+      "journal": "IEEE/ACM Transactions on Networking (ToN)",
+      "year": 2025
+    },
+    {
+      "authors": "J. He, M. Zhang, Q. Ma, and J. Huang",
+      "title": "Trading Fresh IoT Data with Strategic Users",
+      "journal": "IEEE Transactions on Mobile Computing (TMC)",
+      "year": 2025
+    },
+    {
+      "authors": "N. Yang, J. Wen, M. Zhang, and M. Tang",
+      "title": "Generalizable Pareto-Optimal Offloading with Reinforcement Learning in Mobile Edge Computing",
+      "journal": "IEEE Transactions on Services Computing (TSC)",
+      "year": 2025
+    },
+    {
+      "authors": "F. Peng, M. Zhang, and M. Tang",
+      "title": "An Information-Theoretic Analysis for Federated Learning under Concept Drift",
+      "journal": "IEEE Transactions on Network Science and Engineering (TNSE)",
+      "year": 2025
     },
     {
       "authors": "F. Zhao, N. Pappas, M. Zhang, and H. H. Yang",
@@ -73,7 +102,6 @@
     {
       "authors": "M. Zhang, A. Arafa, J. Huang, and H. V. Poor",
       "title": "Pricing Fresh Data",
-      "status": "To appear",
       "journal": "IEEE Journal on Selected Areas in Communications (JSAC)",
       "year": 2021
     },
@@ -118,10 +146,46 @@
   ],
   "Conference_Papers": [
     {
+      "authors": "X. Qiao, X. Du, W. Liu, J. Zhang, P. Mai, M. Zhang, and Y. Pang",
+      "title": "When Sample Selection Bias Precipitates Model Collapse",
+      "conference": "International Conference on Machine Learning (ICML)",
+      "year": 2026
+    },
+    {
+      "authors": "Y. Fu, X. Zhang, and M. Zhang*",
+      "title": "Heterogeneous Mean-Field Reinforcement Learning for Age-Minimal GPU Batching",
+      "conference": "IEEE International Conference on Computer Communications (INFOCOM)",
+      "year": 2026
+    },
+    {
+      "authors": "H. Huang, H. Shao, Z. Wang, and M. Zhang*",
+      "title": "Conditional Age-at-Risk for Task Assignment across Heterogeneous Servers",
+      "conference": "IEEE International Conference on Computer Communications (INFOCOM)",
+      "year": 2026
+    },
+    {
+      "authors": "S. Wen, M. Zhang, Y. Yang, and N. Ding",
+      "title": "FedShard: Federated Unlearning with Efficiency Fairness and Performance Fairness",
+      "conference": "AAAI Conference on Artificial Intelligence (AAAI)",
+      "year": 2026
+    },
+    {
       "authors": "M. Zhou, L. Yang, V. Y. F. Tan, and M. Zhang",
       "title": "Age-Optimal Best Arm Identification",
       "conference": "International Symposium on Modeling and Optimization in Mobile, Ad Hoc, and Wireless Networks (WiOpt)",
       "year": 2026
+    },
+    {
+      "authors": "J. He, M. Zhang, Q. Ma, and J. Huang",
+      "title": "Trading Fresh Data with Correlation",
+      "conference": "International Symposium on Modeling and Optimization in Mobile, Ad Hoc, and Wireless Networks (WiOpt)",
+      "year": 2025
+    },
+    {
+      "authors": "F. Zhao, N. Pappas, M. Zhang, and H. H. Yang",
+      "title": "Age of Information in Energy-Harvesting-Enabled Random Access Networks",
+      "conference": "IEEE International Conference on Computer Communications (INFOCOM)",
+      "year": 2025
     },
     {
       "authors": "X. Qiao, M. Zhang*, M. Tang, and E. Wei",
